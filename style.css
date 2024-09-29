@@ -271,7 +271,7 @@ section {
 
 /* tag h1 */
 #ketua h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: var(--white);
     position: relative;
     top: 8%;
@@ -365,7 +365,7 @@ section {
 
 /* tag h1 */
 #top h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: var(--white);
     position: relative;
     top: 5%;
@@ -459,7 +459,7 @@ section {
 
 /* tag h1 */
 #ejen h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: var(--white);
     position: relative;
     top: 8%;
