@@ -382,25 +382,54 @@ section {
     #tekno .container .content .image,
     #inviso .container .content .image,
     #kombat .container .content .image {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
     }
 
     #tekno .container .content .image,
     #inviso .container .content .image,
     #kombat .container .content .image {
-        top: 20px;
+        top: 10px;
     }
 
     #tekno .container .content .text,
     #inviso .container .content .text,
     #kombat .container .content .text {
-        top: 20px;
+        top: 10px;
     }
 
     #tekno .container .content .anggota,
     #inviso .container .content .anggota,
     #kombat .container .content .anggota {
-        top: 20px;
+        top: 10px;
+    }
+
+    #neuro .container .content .text p,
+    #tekno .container .content .text p,
+    #inviso .container .content .text p,
+    #kombat .container .content .text p {
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    #neuro .container .content .text h1,
+    #tekno .container .content .text h1,
+    #inviso .container .content .text h1,
+    #kombat .container .content .text h1 {
+        font-size: 1rem;
+    }
+
+    #neuro .container .content .anggota h2,
+    #tekno .container .content .anggota h2,
+    #inviso .container .content .anggota h2,
+    #kombat .container .content .anggota h2 {
+        font-size: 1rem;
+    }
+
+    #neuro .container .content .anggota li,
+    #tekno .container .content .anggota li,
+    #inviso .container .content .anggota li,
+    #kombat .container .content .anggota li {
+        font-size: 0.9rem;
     }
 }
