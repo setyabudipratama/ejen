@@ -193,13 +193,14 @@ section {
 
 /* tag h1 */
 #pilar .desc h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: var(--white);
+    font-family: 'Pacifico';
 }
 
 /* tag p */
 #pilar .desc p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--white);
 }
 
