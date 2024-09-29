@@ -281,7 +281,6 @@ section {
 /* class slider */
 #ketua .slider {
     display: flex;
-    justify-content: center;
     overflow-x: auto;
     position: relative;
     top: 10%;
@@ -470,7 +469,6 @@ section {
 /* class slider */
 #ejen .slider {
     display: flex;
-    justify-content: center;
     overflow-x: auto;
     position: relative;
     top: 10%;
