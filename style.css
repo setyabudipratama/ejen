@@ -540,58 +540,97 @@ section {
 
 /* halaman footer */
 footer {
-    background-color: #828282;
-    width: 100vw;
-    min-height: 10vh;
     position: relative;
-    bottom: 0;
-    left: 0;
-}
-
-/* class container */
-footer .container {
+    top: 0;
+    width: 100%;
+    min-height: 10vh;
+    background-color: var(--background);
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
-    height: 100%;
+    align-items: center;
+}
+
+/* class cipta */
+footer .cipta {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5px;
+    margin: 0;
+}
+
+/* tag h5 */
+footer .cipta h5 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--black);
 }
 
 /* tag img */
-footer .container img {
+footer .cipta img {
+    position: relative;
+    top: 0;
     width: 50px;
     height: 50px;
+    margin: 0;
     object-fit: cover;
     border-radius: 50px;
-    margin: 20px 0;
-    cursor: default;
 }
 
-/* class contact dan sosial */
-footer .container .contact,
-footer .container .sosial {
+/* class contact */
+footer .contact {
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
-}
-
-/* tag i */
-footer .container i {
-    font-size: 1.1rem;
+    margin: 0;
+    color: var(--black);
 }
 
 /* tag h2 */
-footer .container h2 {
-    margin: 5px 0;
-    font-size: 1.3rem;
+footer .contact h2 {
+    margin: 0;
+    font-size: 1rem;
     cursor: default;
-    color: var(--black);
 }
 
 /* tag span */
-footer .container span {
+footer .contact span {
+    margin: 0;
+    font-size: 0.8rem;
+    cursor: default;
+}
+
+/* tag i */
+footer .contact i {
+    font-size: 1.2rem;
+    margin-right: 3px;
+}
+
+/* class sosial */
+footer .sosial {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    color: var(--black);
+}
+
+/* tag h2 */
+footer .sosial h2 {
+    margin: 0;
     font-size: 1rem;
     cursor: default;
-    color: var(--black);
+}
+
+/* tag span */
+footer .sosial span {
+    margin: 0;
+    font-size: 0.8rem;
+    cursor: default;
+}
+
+/* tag i */
+footer .sosial i {
+    font-size: 1.2rem;
+    margin-right: 3px;
 }
 
 @media screen and (max-width: 768px) {
@@ -647,5 +686,24 @@ footer .container span {
     
     #top {
         height: 50vh;
+    }
+
+    footer {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    footer .cipta h5 {
+        font-size: 0.8rem;
+    }
+
+    footer .contact,
+    footer .sosial {
+        gap: 0;
+    }
+
+    footer span {
+        font-size: 1rem;
     }
 }
