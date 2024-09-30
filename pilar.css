@@ -66,6 +66,7 @@ section {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    cursor: default;
 }
 
 /* class image */
@@ -143,6 +144,7 @@ section {
     flex-wrap: wrap-reverse;
     justify-content: space-evenly;
     align-items: center;
+    cursor: default;
 }
 
 /* class text */
@@ -219,6 +221,7 @@ section {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    cursor: default;
 }
 
 /* class image */
@@ -295,6 +298,7 @@ section {
     flex-wrap: wrap-reverse;
     justify-content: space-evenly;
     align-items: center;
+    cursor: default;
 }
 
 /* class text */
