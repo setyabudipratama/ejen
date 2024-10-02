@@ -3,6 +3,10 @@
     --black: #101010;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
     position: relative;
@@ -33,7 +37,6 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,10 +53,10 @@ header {
     position: relative;
     top: 0;
     left: 50%;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     object-fit: cover;
-    border-radius: 50%;
+    clip-path: circle(50% at 50% 50%);
 }
 
 /* class nav-links */
@@ -64,7 +67,7 @@ header {
     list-style: none;
     position: relative;
     left: 60%;
-    gap: 20px;
+    gap: 0;
     background: transparent;
     backdrop-filter: blur(1rem);
     /* efek blur */
@@ -367,7 +370,7 @@ section {
     font-size: 2rem;
     color: var(--white);
     position: relative;
-    top: 5%;
+    top: 8%;
     left: 5%;
     cursor: default;
 }
@@ -377,7 +380,7 @@ section {
     display: flex;
     overflow-x: scroll;
     position: relative;
-    top: 5%;
+    top: 10%;
     width: 100%;
     height: auto;
 }
@@ -444,6 +447,100 @@ section {
 }
 
 
+/* halaman Mentor in Akademi*/
+#mentor {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to left, #f33535, #000000);
+}
+
+/* tag h1 */
+#mentor h1 {
+    font-size: 2rem;
+    color: var(--white);
+    position: relative;
+    top: 8%;
+    left: 5%;
+    cursor: default;
+}
+
+/* class slider */
+#mentor .slider {
+    display: flex;
+    overflow-x: auto;
+    position: relative;
+    top: 10%;
+    width: 100%;
+    height: auto;
+}
+
+/* class profil */
+#mentor .slider .profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    flex: 0 0 auto;
+    margin: 0 0 20px 40px;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/* tag img */
+#mentor .slider .profil img {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-top: 20px;
+    transition: 0.5s ease;
+}
+
+/* tag h2 */
+#mentor .slider .profil h2 {
+    font-size: 1.5rem;
+    color: var(--white);
+    position: absolute;
+    top: 220px;
+    opacity: 0;
+    transform: translateX(-30%);
+    transition: 0.5s ease;
+}
+
+/* tag span */
+#mentor .slider .profil span {
+    font-size: 1.2rem;
+    color: var(--white);
+    position: absolute;
+    top: 270px;
+    opacity: 0;
+    /* tampilan awal */
+    transform: translateX(30%);
+    transition: 0.5s ease;
+}
+
+/* mengatur posisi element sibling h2 saat hover */
+#mentor .slider .profil img:hover+h2,
+#mentor .slider .profil img:hover+h2+span {
+    opacity: 1;
+    /* posisi element waktu aktif */
+    transform: translateX(0);
+    /* posisi element waktu aktif */
+}
+
+#mentor .slider .profil img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.5);
+}
+
+
 /* halaman top ejen in Akademi*/
 #ejen {
     display: flex;
@@ -453,7 +550,7 @@ section {
     position: relative;
     top: 0;
     left: 0;
-    background: linear-gradient(to left, #ffff12, #000000);
+    background: linear-gradient(to right, #b5b50e, #000000);
 }
 
 /* tag h1 */
@@ -639,13 +736,14 @@ footer .sosial i {
     }
 
     .navbar .navbar-nav {
-        top: 20px;
+        top: 0;
         left: 25%;
         width: 200px;
+        height: auto;
     }
 
     .navbar .btn {
-        top: 20px;
+        top: 0;
         left: 25%;
         width: 200px;
     }
@@ -660,18 +758,22 @@ footer .sosial i {
     }
 
     #ketua,
+    #top,
+    #mentor,
     #ejen {
-        height: 53vh;
+        height: 55vh;
     }
 
     #ketua h1,
     #top h1,
+    #mentor h1,
     #ejen h1 {
         font-size: 1.7rem;
     }
 
     #ketua .slider .profil h2,
     #top .slider .profil h2,
+    #mentor .slider .profil h2,
     #ejen .slider .profil h2 {
         font-size: 1.3rem;
         top: 240px;
@@ -679,13 +781,10 @@ footer .sosial i {
 
     #ketua .slider .profil span,
     #top .slider .profil span,
+    #mentor .slider .profil span,
     #ejen .slider .profil span {
         font-size: 1rem;
         top: 280px;
-    }
-    
-    #top {
-        height: 50vh;
     }
 
     footer {
