@@ -5,6 +5,7 @@
 
 * {
     box-sizing: border-box;
+    /* border: 1px solid var(--black); */
 }
 
 html,
@@ -24,7 +25,7 @@ header {
     position: relative;
     top: 55px;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: url('gambar/ejen Alicia.jpg') no-repeat center center/cover;
     background-blend-mode: multiply;
@@ -171,7 +172,7 @@ section {
     position: relative;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: linear-gradient(to left, #828282, #000000);
     display: flex;
@@ -186,7 +187,7 @@ section {
     justify-content: center;
     row-gap: 10px;
     color: var(--white);
-    width: 350px;
+    width: 500px;
     position: relative;
     top: 0;
     left: 10%;
@@ -234,13 +235,12 @@ section {
     place-items: center;
     grid-template-columns: repeat(2, 1fr);
     /* grid gambar */
-    width: 150px;
+    width: 500px;
     height: 150px;
-    gap: 15px;
+    row-gap: 25px;
     position: relative;
-    top: 25%;
-    right: 20%;
-    cursor: pointer;
+    top: 20%;
+    right: 0;
 }
 
 /* class image */
@@ -249,6 +249,8 @@ section {
     height: 150px;
     border-radius: 10px;
     object-fit: cover;
+    cursor: pointer;
+    gap: 0;
     transition: 0.5s ease;
 }
 
@@ -263,7 +265,7 @@ section {
 #ketua {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: relative;
     top: 0;
@@ -357,7 +359,7 @@ section {
 #top {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: relative;
     top: 0;
@@ -451,7 +453,7 @@ section {
 #mentor {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: relative;
     top: 0;
@@ -545,7 +547,7 @@ section {
 #ejen {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: relative;
     top: 0;
@@ -686,6 +688,7 @@ footer .contact {
 footer .contact h2 {
     margin: 0;
     font-size: 1rem;
+    font-weight: bold;
     cursor: default;
 }
 
@@ -699,7 +702,6 @@ footer .contact span {
 /* tag i */
 footer .contact i {
     font-size: 1.2rem;
-    margin-right: 3px;
 }
 
 /* class sosial */
@@ -714,6 +716,7 @@ footer .sosial {
 footer .sosial h2 {
     margin: 0;
     font-size: 1rem;
+    font-weight: bold;
     cursor: default;
 }
 
@@ -731,8 +734,8 @@ footer .sosial i {
 }
 
 @media screen and (max-width: 768px) {
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    .navbar .fa-bars {
+        color: var(--white);
     }
 
     .navbar .navbar-nav {
@@ -752,16 +755,20 @@ footer .sosial i {
         font-size: 2rem;
     }
 
+    #pilar .desc {
+        width: 80%;
+    }
+
     #pilar .galery {
         top: -50px;
-        left: 15%;
+        left: 0;
     }
 
     #ketua,
     #top,
     #mentor,
     #ejen {
-        height: 60vh;
+        height: 70vh;
     }
 
     #ketua h1,
@@ -791,6 +798,13 @@ footer .sosial i {
         width: 100%;
         height: auto;
         margin: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    footer .cipta {
+        width: 30%;
     }
 
     footer .cipta h5 {
@@ -800,9 +814,10 @@ footer .sosial i {
     footer .contact,
     footer .sosial {
         gap: 0;
+        margin: 0;
     }
 
     footer span {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
