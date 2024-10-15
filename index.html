@@ -38,15 +38,16 @@
                         <a class="nav-link href="#">Contact Us</a>
                     </li>
                 </ul>
-                <button class="btn btn-outline-success me-2" type="button">Join Now</button>
             </div>
         </div>
     </nav>
     
     <header>
-        <div class="header">
-            <h1>Selamat Datang Para Ejen</h1>
-            <button class="btn">Join Now</button>
+        <div class="container">
+            <div class="content">
+                <h1>Selamat Datang Para Ejen</h1>
+                <button><i class="fa-regular fa-circle-down"></i>Read More</button>
+            </div>
         </div>
     </header>
 
@@ -220,6 +221,12 @@
         const btn = document.querySelector('#pilar .btn');
         btn.addEventListener('click', () => {
             window.location.href = 'pilar.html'
+        });
+
+        const readMore = document.querySelector('header button');
+        readMore.addEventListener('click', () => {
+            const pilar = document.getElementById('pilar');
+            pilar.scrollIntoView({ behavior: 'smooth' });
         });
     </script>
 </body>
