@@ -91,9 +91,9 @@ header {
     position: relative;
     top: 0;
     left: 0;
-    margin-top: 65px;
+    margin-top: 70px;
     width: 100%;
-    height: 95vh;
+    height: 100vh;
     background: url('gambar/ejen Alicia.jpg') no-repeat center center/cover;
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.4);
@@ -112,10 +112,13 @@ header .container .content {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 /* tag h1 */
-header .container h1 {
+header .container .content h1 {
     margin: 0;
     font-size: 2.5rem;
     color: var(--white);
@@ -125,26 +128,31 @@ header .container h1 {
 }
 
 /* tag button */
-header .container button {
+header .container .content button {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 0 50px 0 0;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
     border: 2px solid var(--white);
     color: var(--white);
-    background: none;
+    background: transparent;
+    backdrop-filter: blur(10px);
     transition: all 0.3s ease;
 }
 
-header .container button:hover {
+header .container .content button:hover {
     transform: scale(1.1);
     background: var(--white);
     color: var(--black);
+}
+
+header .container .content .fa-circle-down {
+    font-size: 1.6rem;
 }
 
 /* class pilar */
@@ -253,18 +261,27 @@ header .container button:hover {
     background: linear-gradient(to left, #ff1212, #000000);
 }
 
+#ketua .container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* tag h1 */
-#ketua h1 {
-    font-size: 2rem;
+#ketua .container h1 {
+    font-size: 1.6rem;
+    font-family: pacifico;
     color: var(--white);
     position: relative;
-    top: 8%;
-    left: 5%;
+    top: 5%;
+    left: 0;
     cursor: default;
 }
 
 /* class slider */
-#ketua .slider {
+#ketua .container .slider {
     display: flex;
     overflow-x: auto;
     position: relative;
@@ -274,13 +291,13 @@ header .container button:hover {
 }
 
 /* class profil */
-#ketua .slider .profil {
+#ketua .container .slider .profil {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
     flex: 0 0 auto;
-    margin: 0 0 20px 40px;
+    margin: 0 0 20px 10px;
     cursor: pointer;
     position: relative;
     top: 0;
@@ -288,7 +305,7 @@ header .container button:hover {
 }
 
 /* tag img */
-#ketua .slider .profil img {
+#ketua .container .slider .profil img {
     width: 200px;
     height: 300px;
     border-radius: 10px;
@@ -298,7 +315,7 @@ header .container button:hover {
 }
 
 /* tag h2 */
-#ketua .slider .profil h2 {
+#ketua .container .slider .profil h2 {
     font-size: 1.5rem;
     color: var(--white);
     position: absolute;
@@ -309,7 +326,7 @@ header .container button:hover {
 }
 
 /* tag span */
-#ketua .slider .profil span {
+#ketua .container .slider .profil span {
     font-size: 1.2rem;
     color: var(--white);
     position: absolute;
@@ -321,15 +338,15 @@ header .container button:hover {
 }
 
 /* mengatur posisi element sibling h2 saat hover */
-#ketua .slider .profil img:hover+h2,
-#ketua .slider .profil img:hover+h2+span {
+#ketua .container .slider .profil img:hover+h2,
+#ketua .container .slider .profil img:hover+h2+span {
     opacity: 1;
     /* posisi element waktu aktif */
     transform: translateX(0);
     /* posisi element waktu aktif */
 }
 
-#ketua .slider .profil img:hover {
+#ketua .container .slider .profil img:hover {
     transform: scale(1.1);
     filter: brightness(0.5);
 }
@@ -347,18 +364,27 @@ header .container button:hover {
     background: linear-gradient(to right, #005eff, #000000);
 }
 
+#top .container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* tag h1 */
-#top h1 {
-    font-size: 2rem;
+#top .container h1 {
+    font-size: 1.6rem;
+    font-family: pacifico;
     color: var(--white);
     position: relative;
-    top: 8%;
-    left: 5%;
+    top: 5%;
+    left: 0;
     cursor: default;
 }
 
 /* class slider */
-#top .slider {
+#top .container .slider {
     display: flex;
     overflow-x: scroll;
     position: relative;
@@ -368,13 +394,13 @@ header .container button:hover {
 }
 
 /* class profil */
-#top .slider .profil {
+#top .container .slider .profil {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
     flex: 0 0 auto;
-    margin: 0 0 20px 40px;
+    margin: 0 0 20px 10px;
     cursor: pointer;
     position: relative;
     top: 0;
@@ -382,7 +408,7 @@ header .container button:hover {
 }
 
 /* tag img */
-#top .slider .profil img {
+#top .container .slider .profil img {
     width: 200px;
     height: 300px;
     border-radius: 10px;
@@ -392,7 +418,7 @@ header .container button:hover {
 }
 
 /* tag h2 */
-#top .slider .profil h2 {
+#top .container .slider .profil h2 {
     font-size: 1.5rem;
     color: var(--white);
     position: absolute;
@@ -403,7 +429,7 @@ header .container button:hover {
 }
 
 /* tag span */
-#top .slider .profil span {
+#top .container .slider .profil span {
     font-size: 1.2rem;
     color: var(--white);
     position: absolute;
@@ -415,15 +441,15 @@ header .container button:hover {
 }
 
 /* mengatur posisi element sibling h2 saat hover */
-#top .slider .profil img:hover+h2,
-#top .slider .profil img:hover+h2+span {
+#top .container .slider .profil img:hover+h2,
+#top .container .slider .profil img:hover+h2+span {
     opacity: 1;
     /* posisi element waktu aktif */
     transform: translateX(0);
     /* posisi element waktu aktif */
 }
 
-#top .slider .profil img:hover {
+#top .container .slider .profil img:hover {
     transform: scale(1.1);
     filter: brightness(0.5);
 }
@@ -441,18 +467,27 @@ header .container button:hover {
     background: linear-gradient(to left, #f33535, #000000);
 }
 
+#mentor .container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* tag h1 */
-#mentor h1 {
-    font-size: 2rem;
+#mentor .container h1 {
+    font-size: 1.6rem;
+    font-family: pacifico;
     color: var(--white);
     position: relative;
-    top: 8%;
-    left: 5%;
+    top: 5%;
+    left: 0;
     cursor: default;
 }
 
 /* class slider */
-#mentor .slider {
+#mentor .container .slider {
     display: flex;
     overflow-x: auto;
     position: relative;
@@ -462,13 +497,13 @@ header .container button:hover {
 }
 
 /* class profil */
-#mentor .slider .profil {
+#mentor .container .slider .profil {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
     flex: 0 0 auto;
-    margin: 0 0 20px 40px;
+    margin: 0 0 20px 10px;
     cursor: pointer;
     position: relative;
     top: 0;
@@ -476,7 +511,7 @@ header .container button:hover {
 }
 
 /* tag img */
-#mentor .slider .profil img {
+#mentor .container .slider .profil img {
     width: 200px;
     height: 300px;
     border-radius: 10px;
@@ -486,7 +521,7 @@ header .container button:hover {
 }
 
 /* tag h2 */
-#mentor .slider .profil h2 {
+#mentor .container .slider .profil h2 {
     font-size: 1.5rem;
     color: var(--white);
     position: absolute;
@@ -497,7 +532,7 @@ header .container button:hover {
 }
 
 /* tag span */
-#mentor .slider .profil span {
+#mentor .container .slider .profil span {
     font-size: 1.2rem;
     color: var(--white);
     position: absolute;
@@ -509,15 +544,15 @@ header .container button:hover {
 }
 
 /* mengatur posisi element sibling h2 saat hover */
-#mentor .slider .profil img:hover+h2,
-#mentor .slider .profil img:hover+h2+span {
+#mentor .container .slider .profil img:hover+h2,
+#mentor .container .slider .profil img:hover+h2+span {
     opacity: 1;
     /* posisi element waktu aktif */
     transform: translateX(0);
     /* posisi element waktu aktif */
 }
 
-#mentor .slider .profil img:hover {
+#mentor .container .slider .profil img:hover {
     transform: scale(1.1);
     filter: brightness(0.5);
 }
@@ -535,18 +570,27 @@ header .container button:hover {
     background: linear-gradient(to right, #b5b50e, #000000);
 }
 
+#ejen .container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* tag h1 */
-#ejen h1 {
-    font-size: 2rem;
+#ejen .container h1 {
+    font-size: 1.6rem;
+    font-family: pacifico;
     color: var(--white);
     position: relative;
-    top: 8%;
-    left: 5%;
+    top: 5%;
+    left: 0;
     cursor: default;
 }
 
 /* class slider */
-#ejen .slider {
+#ejen .container .slider {
     display: flex;
     overflow-x: auto;
     position: relative;
@@ -556,13 +600,13 @@ header .container button:hover {
 }
 
 /* class profil */
-#ejen .slider .profil {
+#ejen .container .slider .profil {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
     flex: 0 0 auto;
-    margin: 0 0 20px 40px;
+    margin: 0 0 20px 10px;
     cursor: pointer;
     position: relative;
     top: 0;
@@ -570,7 +614,7 @@ header .container button:hover {
 }
 
 /* tag img */
-#ejen .slider .profil img {
+#ejen .container .slider .profil img {
     width: 200px;
     height: 300px;
     border-radius: 10px;
@@ -580,7 +624,7 @@ header .container button:hover {
 }
 
 /* tag h2 */
-#ejen .slider .profil h2 {
+#ejen .container .slider .profil h2 {
     font-size: 1.5rem;
     color: var(--white);
     position: absolute;
@@ -591,7 +635,7 @@ header .container button:hover {
 }
 
 /* tag span */
-#ejen .slider .profil span {
+#ejen .container .slider .profil span {
     font-size: 1.2rem;
     color: var(--white);
     position: absolute;
@@ -603,15 +647,15 @@ header .container button:hover {
 }
 
 /* mengatur posisi element sibling h2 saat hover */
-#ejen .slider .profil img:hover+h2,
-#ejen .slider .profil img:hover+h2+span {
+#ejen .container .slider .profil img:hover+h2,
+#ejen .container .slider .profil img:hover+h2+span {
     opacity: 1;
     /* posisi element waktu aktif */
     transform: translateX(0);
     /* posisi element waktu aktif */
 }
 
-#ejen .slider .profil img:hover {
+#ejen .container .slider .profil img:hover {
     transform: scale(1.1);
     filter: brightness(0.5);
 }
@@ -737,8 +781,26 @@ footer .sosial i {
         width: 80%;
     }
 
+    header .container .content h1 {
+        font-size: 2rem;
+    }
+
+    header .container .content button {
+        width: 100px;
+        height: 100px;
+        font-size: 1rem;
+    }
+
+    header .container .content button .fa-circle-down {
+        font-size: 1.3rem;
+    }
+
     #pilar .desc {
         width: 80%;
+    }
+
+    #pilar .desc h1 {
+        font-size: 1.8rem;
     }
 
     #pilar .galery {
@@ -750,30 +812,38 @@ footer .sosial i {
     #top,
     #mentor,
     #ejen {
-        height: 70vh;
+        height: 50vh;
     }
 
-    #ketua h1,
-    #top h1,
-    #mentor h1,
-    #ejen h1 {
-        font-size: 1.7rem;
+    #ketua .container h1,
+    #top .container h1,
+    #mentor .container h1,
+    #ejen .container h1 {
+        font-size: 1.5rem;
     }
 
-    #ketua .slider .profil h2,
-    #top .slider .profil h2,
-    #mentor .slider .profil h2,
-    #ejen .slider .profil h2 {
-        font-size: 1.3rem;
-        top: 240px;
+    #ketua .container .slider .profil img,
+    #top .container .slider .profil img,
+    #mentor .container .slider .profil img,
+    #ejen .container .slider .profil img {
+        width: 150px;
+        height: 220px;
     }
 
-    #ketua .slider .profil span,
-    #top .slider .profil span,
-    #mentor .slider .profil span,
-    #ejen .slider .profil span {
+    #ketua .container .slider .profil h2,
+    #top .container .slider .profil h2,
+    #mentor .container .slider .profil h2,
+    #ejen .container .slider .profil h2 {
         font-size: 1rem;
-        top: 280px;
+        top: 160px;
+    }
+
+    #ketua .container .slider .profil span,
+    #top .container .slider .profil span,
+    #mentor .container .slider .profil span,
+    #ejen .container .slider .profil span {
+        font-size: 0.8rem;
+        top: 190px;
     }
 
     footer {
@@ -782,7 +852,7 @@ footer .sosial i {
         margin: 0;
         display: flex;
         flex-wrap: nowrap;
-        justify-content: space-around;
+        justify-content: center;
     }
 
     footer .cipta {
@@ -795,7 +865,7 @@ footer .sosial i {
     }
 
     footer .cipta h5 {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
 
     footer .contact i,
@@ -811,7 +881,7 @@ footer .sosial i {
     }
 
     footer span {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
 }
 
@@ -830,7 +900,7 @@ footer .sosial i {
         width: 200px;
     }
 
-    header .container h1 {
+    header .container .content h1 {
         font-size: 2rem;
     }
 
@@ -842,6 +912,10 @@ footer .sosial i {
         width: 80%;
     }
 
+    #pilar .desc h1 {
+        font-size: 2rem;
+    }
+
     #pilar .galery {
         top: -50px;
         left: 20%;
@@ -851,30 +925,38 @@ footer .sosial i {
     #top,
     #mentor,
     #ejen {
-        height: 60vh;
+        height: 50vh;
     }
 
-    #ketua h1,
-    #top h1,
-    #mentor h1,
-    #ejen h1 {
-        font-size: 1.7rem;
+    #ketua .container h1,
+    #top .container h1,
+    #mentor .container h1,
+    #ejen .container h1 {
+        font-size: 1.6rem;
     }
 
-    #ketua .slider .profil h2,
-    #top .slider .profil h2,
-    #mentor .slider .profil h2,
-    #ejen .slider .profil h2 {
-        font-size: 1.3rem;
-        top: 240px;
+    #ketua .container .slider .profil img,
+    #top .container .slider .profil img,
+    #mentor .container .slider .profil img,
+    #ejen .container .slider .profil img {
+        width: 180px;
+        height: 250px;
     }
 
-    #ketua .slider .profil span,
-    #top .slider .profil span,
-    #mentor .slider .profil span,
-    #ejen .slider .profil span {
+    #ketua .container .slider .profil h2,
+    #top .container .slider .profil h2,
+    #mentor .container .slider .profil h2,
+    #ejen .container .slider .profil h2 {
         font-size: 1rem;
-        top: 280px;
+        top: 190px;
+    }
+
+    #ketua .container .slider .profil span,
+    #top .container .slider .profil span,
+    #mentor .container .slider .profil span,
+    #ejen .container .slider .profil span {
+        font-size: 0.8rem;
+        top: 220px;
     }
 
     footer {
