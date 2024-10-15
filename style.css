@@ -5,7 +5,7 @@
 
 * {
     box-sizing: border-box;
-    /* border: 1px solid var(--black); */
+    border: 1px solid var(--black);
 }
 
 html,
@@ -15,21 +15,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-
-/* halaman header */
-header {
-    margin: 0;
-    padding: 0;
-    position: relative;
-    top: 55px;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: url('gambar/ejen Alicia.jpg') no-repeat center center/cover;
-    background-blend-mode: multiply;
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* class navbar */
@@ -45,9 +30,14 @@ header {
     background: linear-gradient(to right, #828282, #000000);
 }
 
-.navbar-toggler-icon {
-    border-color: var(--white);
+.navbar .fa-bars {
+    color: var(--white);
 }
+
+/* .navbar .container-fluid  {
+    display: flex;
+    justify-content: space-between;
+} */
 
 /* tag img */
 .navbar img {
@@ -67,7 +57,7 @@ header {
     justify-content: space-evenly;
     list-style: none;
     position: relative;
-    left: 60%;
+    left: 80%;
     gap: 0;
     background: transparent;
     backdrop-filter: blur(1rem);
@@ -93,45 +83,39 @@ header {
     color: var(--black);
 }
 
-/* class btn navbar */
-.navbar .btn {
+
+/* halaman header */
+header {
+    margin: 0;
+    padding: 0;
     position: relative;
     top: 0;
-    right: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    width: 100px;
-    height: 35px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 2px solid var(--white);
-    color: var(--white);
-    background: none;
-    transition: all 0.3s ease;
-}
-
-.navbar .btn:hover {
-    transform: scale(1.1);
-    background: var(--white);
-    color: var(--black);
+    left: 0;
+    margin-top: 70px;
+    width: 100%;
+    height: 100vh;
+    background: url('gambar/ejen Alicia.jpg') no-repeat center center/cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* class header */
-.header {
+header .container {
     position: relative;
     top: 30%;
-    left: 10%;
-    width: 350px;
-    /* ukuran paragraph class header */
+    left: 0;
+    width: 90%;
+}
+
+header .container .content {
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
 /* tag h1 */
-.header h1 {
+header .container h1 {
     margin: 0;
     font-size: 2.5rem;
     color: var(--white);
@@ -140,31 +124,27 @@ header {
     cursor: default;
 }
 
-/* class btn header */
-.header .btn {
-    font-size: 1.1rem;
+/* tag button */
+header .container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    font-size: 1rem;
     margin: 0 50px 0 0;
-    width: 140px;
-    height: 50px;
-    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
     border: 2px solid var(--white);
     color: var(--white);
     background: none;
     transition: all 0.3s ease;
 }
 
-.header .btn:hover {
+header .container button:hover {
     transform: scale(1.1);
     background: var(--white);
     color: var(--black);
-}
-
-
-/* halaman pilar */
-section {
-    position: relative;
-    margin: 0;
-    padding: 0;
 }
 
 /* class pilar */
@@ -734,10 +714,7 @@ footer .sosial i {
     margin-right: 3px;
 }
 
-@media screen and (max-width: 768px) {
-    .navbar .fa-bars {
-        color: var(--white);
-    }
+@media screen and (max-width: 767px) {
 
     .navbar .navbar-nav {
         top: 0;
@@ -752,8 +729,12 @@ footer .sosial i {
         width: 200px;
     }
 
-    .header h1 {
+    header .container h1 {
         font-size: 2rem;
+    }
+
+    header .container .content {
+        width: 80%;
     }
 
     #pilar .desc {
@@ -770,6 +751,107 @@ footer .sosial i {
     #mentor,
     #ejen {
         height: 70vh;
+    }
+
+    #ketua h1,
+    #top h1,
+    #mentor h1,
+    #ejen h1 {
+        font-size: 1.7rem;
+    }
+
+    #ketua .slider .profil h2,
+    #top .slider .profil h2,
+    #mentor .slider .profil h2,
+    #ejen .slider .profil h2 {
+        font-size: 1.3rem;
+        top: 240px;
+    }
+
+    #ketua .slider .profil span,
+    #top .slider .profil span,
+    #mentor .slider .profil span,
+    #ejen .slider .profil span {
+        font-size: 1rem;
+        top: 280px;
+    }
+
+    footer {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    footer .cipta {
+        width: 35%;
+    }
+
+    footer .cipta img {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer .cipta h5 {
+        font-size: 0.6rem;
+    }
+
+    footer .contact i,
+    footer .sosial i {
+        font-size: 1rem;
+    }
+
+    footer .contact,
+    footer .sosial {
+        gap: 0;
+        margin: 0;
+        width: 35%;
+    }
+
+    footer span {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+
+    .navbar .navbar-nav {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar .btn {
+        top: 0;
+        left: 25%;
+        width: 200px;
+    }
+
+    header .container h1 {
+        font-size: 2rem;
+    }
+
+    header .container .content {
+        width: 80%;
+    }
+
+    #pilar .desc {
+        width: 80%;
+    }
+
+    #pilar .galery {
+        top: -50px;
+        left: 20%;
+    }
+
+    #ketua,
+    #top,
+    #mentor,
+    #ejen {
+        height: 60vh;
     }
 
     #ketua h1,
