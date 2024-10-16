@@ -5,7 +5,7 @@
 
 * {
     box-sizing: border-box;
-/*     border: 1px solid var(--black); */
+    /* border: 1px solid var(--black); */
 }
 
 html,
@@ -275,7 +275,7 @@ header .container .content .fa-circle-down {
     font-family: pacifico;
     color: var(--white);
     position: relative;
-    top: 5%;
+    top: 10%;
     left: 0;
     cursor: default;
 }
@@ -285,7 +285,7 @@ header .container .content .fa-circle-down {
     display: flex;
     overflow-x: auto;
     position: relative;
-    top: 10%;
+    top: 15%;
     width: 100%;
     height: auto;
 }
@@ -378,7 +378,7 @@ header .container .content .fa-circle-down {
     font-family: pacifico;
     color: var(--white);
     position: relative;
-    top: 5%;
+    top: 10%;
     left: 0;
     cursor: default;
 }
@@ -388,7 +388,7 @@ header .container .content .fa-circle-down {
     display: flex;
     overflow-x: scroll;
     position: relative;
-    top: 10%;
+    top: 15%;
     width: 100%;
     height: auto;
 }
@@ -481,7 +481,7 @@ header .container .content .fa-circle-down {
     font-family: pacifico;
     color: var(--white);
     position: relative;
-    top: 5%;
+    top: 10%;
     left: 0;
     cursor: default;
 }
@@ -491,7 +491,7 @@ header .container .content .fa-circle-down {
     display: flex;
     overflow-x: auto;
     position: relative;
-    top: 10%;
+    top: 15%;
     width: 100%;
     height: auto;
 }
@@ -584,7 +584,7 @@ header .container .content .fa-circle-down {
     font-family: pacifico;
     color: var(--white);
     position: relative;
-    top: 5%;
+    top: 10%;
     left: 0;
     cursor: default;
 }
@@ -594,7 +594,7 @@ header .container .content .fa-circle-down {
     display: flex;
     overflow-x: auto;
     position: relative;
-    top: 10%;
+    top: 15%;
     width: 100%;
     height: auto;
 }
@@ -628,30 +628,41 @@ header .container .content .fa-circle-down {
     font-size: 1.5rem;
     color: var(--white);
     position: absolute;
-    top: 220px;
+    top: 230px;
     opacity: 0;
     transform: translateX(-30%);
     transition: 0.5s ease;
 }
 
 /* tag span */
-#ejen .container .slider .profil span {
+#ejen .container .slider .profil span:nth-child(3) {
     font-size: 1.2rem;
     color: var(--white);
     position: absolute;
-    top: 270px;
+    top: 260px;
     opacity: 0;
-    /* tampilan awal */
     transform: translateX(30%);
+    transition: 0.5s ease;
+}
+
+#ejen .container .slider .profil span:nth-child(4) {
+    font-size: 1.2rem;
+    color: var(--white);
+    position: absolute;
+    top: 290px;
+    opacity: 0;
+    transform: translateY(50%);
     transition: 0.5s ease;
 }
 
 /* mengatur posisi element sibling h2 saat hover */
 #ejen .container .slider .profil img:hover+h2,
-#ejen .container .slider .profil img:hover+h2+span {
+#ejen .container .slider .profil img:hover+h2+span:nth-child(3),
+#ejen .container .slider .profil img:hover+h2+span+span:nth-child(4) {
     opacity: 1;
     /* posisi element waktu aktif */
     transform: translateX(0);
+    transform: translateY(0);
     /* posisi element waktu aktif */
 }
 
@@ -804,8 +815,9 @@ footer .sosial i {
     }
 
     #pilar .galery {
-        top: -50px;
+        top: -60px;
         left: 0;
+        row-gap: 40px;
     }
 
     #ketua,
@@ -822,6 +834,13 @@ footer .sosial i {
         font-size: 1.5rem;
     }
 
+    #ketua .container .slider,
+    #top .container .slider,
+    #mentor .container .slider,
+    #ejen .container .slider {
+        height: 35vh;
+    }
+
     #ketua .container .slider .profil img,
     #top .container .slider .profil img,
     #mentor .container .slider .profil img,
@@ -835,15 +854,23 @@ footer .sosial i {
     #mentor .container .slider .profil h2,
     #ejen .container .slider .profil h2 {
         font-size: 1rem;
-        top: 160px;
+        top: 185px;
     }
 
-    #ketua .container .slider .profil span,
-    #top .container .slider .profil span,
-    #mentor .container .slider .profil span,
-    #ejen .container .slider .profil span {
+    #ketua .container .slider .profil span:nth-child(3),
+    #top .container .slider .profil span:nth-child(3),
+    #mentor .container .slider .profil span:nth-child(3),
+    #ejen .container .slider .profil span:nth-child(3) {
         font-size: 0.8rem;
-        top: 190px;
+        top: 205px;
+    }
+
+    #ketua .container .slider .profil span:nth-child(4),
+    #top .container .slider .profil span:nth-child(4),
+    #mentor .container .slider .profil span:nth-child(4),
+    #ejen .container .slider .profil span:nth-child(4) {
+        font-size: 0.8rem;
+        top: 220px;
     }
 
     footer {
@@ -865,7 +892,7 @@ footer .sosial i {
     }
 
     footer .cipta h5 {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
 
     footer .contact i,
@@ -917,8 +944,9 @@ footer .sosial i {
     }
 
     #pilar .galery {
-        top: -50px;
+        top: -70px;
         left: 20%;
+        row-gap: 80px;
     }
 
     #ketua,
@@ -951,12 +979,20 @@ footer .sosial i {
         top: 190px;
     }
 
-    #ketua .container .slider .profil span,
-    #top .container .slider .profil span,
-    #mentor .container .slider .profil span,
-    #ejen .container .slider .profil span {
+    #ketua .container .slider .profil span:nth-child(3),
+    #top .container .slider .profil span:nth-child(3),
+    #mentor .container .slider .profil span:nth-child(3),
+    #ejen .container .slider .profil span:nth-child(3) {
         font-size: 0.8rem;
-        top: 220px;
+        top: 210px;
+    }
+
+    #ketua .container .slider .profil span:nth-child(4),
+    #top .container .slider .profil span:nth-child(4),
+    #mentor .container .slider .profil span:nth-child(4),
+    #ejen .container .slider .profil span:nth-child(4) {
+        font-size: 0.8rem;
+        top: 225px;
     }
 
     footer {
