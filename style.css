@@ -824,7 +824,7 @@ footer .sosial i {
     #top,
     #mentor,
     #ejen {
-        height: 50vh;
+        height: 60vh;
     }
 
     #ketua .container h1,
@@ -838,7 +838,7 @@ footer .sosial i {
     #top .container .slider,
     #mentor .container .slider,
     #ejen .container .slider {
-        height: 35vh;
+        height: 40vh;
     }
 
     #ketua .container .slider .profil img,
@@ -892,7 +892,7 @@ footer .sosial i {
     }
 
     footer .cipta h5 {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
 
     footer .contact i,
