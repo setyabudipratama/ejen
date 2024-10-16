@@ -156,7 +156,8 @@ header .container .content button:hover {
     box-shadow: none;
 }
 
-header .container .content .fa-circle-down {
+/* class fa-arrow-down */
+header .container .content .fa-arrow-down {
     font-size: 1.6rem;
 }
 
