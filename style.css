@@ -46,11 +46,12 @@ body {
 .navbar img {
     position: relative;
     top: 0;
-    left: 50%;
+    left: 3%;
     width: 40px;
     height: 40px;
     object-fit: cover;
     clip-path: circle(50% at 50% 50%);
+    cursor: default;
 }
 
 /* class nav-links */
@@ -60,7 +61,7 @@ body {
     justify-content: space-evenly;
     list-style: none;
     position: relative;
-    left: 80%;
+    left: 75%;
     gap: 0;
     background: transparent;
     backdrop-filter: blur(1rem);
@@ -796,9 +797,9 @@ footer .sosial i {
 @media screen and (max-width: 767px) {
 
     .navbar .navbar-nav {
-        top: 0;
-        left: 25%;
-        width: 200px;
+        top: 5px;
+        left: 5%;
+        width: 90%;
         height: auto;
     }
 
