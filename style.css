@@ -658,7 +658,7 @@ header .container .content .fa-arrow-down {
     position: absolute;
     top: 230px;
     opacity: 0;
-    transform: translateX(-30%);
+    transform: translateX(-20%);
     transition: 0.5s ease;
 }
 
@@ -669,7 +669,7 @@ header .container .content .fa-arrow-down {
     position: absolute;
     top: 260px;
     opacity: 0;
-    transform: translateX(30%);
+    transform: translateX(18%);
     transition: 0.5s ease;
 }
 
@@ -679,7 +679,7 @@ header .container .content .fa-arrow-down {
     position: absolute;
     top: 290px;
     opacity: 0;
-    transform: translateY(50%);
+    transform: translateY(40%);
     transition: 0.5s ease;
 }
 
