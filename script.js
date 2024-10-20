@@ -36,3 +36,9 @@ aPilar.addEventListener('click', () => {
     const pilar = document.getElementById('pilar');
     pilar.scrollIntoView({ behavior: 'smooth' });
 });
+
+// fungsi untuk scroll ke halaman utama
+const home = document.querySelector('.nav-item:first-child .nav-link');
+home.addEventListener('click', () => {
+    home.scrollIntoView({top: 0, behavior: 'smooth' });
+});
