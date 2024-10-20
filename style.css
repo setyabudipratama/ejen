@@ -60,9 +60,6 @@ body {
     align-items: center;
     justify-content: space-evenly;
     list-style: none;
-    position: relative;
-    left: 75%;
-    gap: 0;
     background: transparent;
     backdrop-filter: blur(1rem);
     /* efek blur */
@@ -91,7 +88,7 @@ body {
 .navbar .dropdown-menu {
     position: relative;
     top: 100%;
-    left: -50%;
+    left: -120%;
 }
 
 
@@ -805,8 +802,8 @@ footer .sosial i {
 
     .navbar .navbar-nav {
         top: 5px;
-        left: 5%;
-        width: 90%;
+        left: 0;
+        width: 100%;
         height: auto;
     }
 
