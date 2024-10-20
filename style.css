@@ -72,7 +72,7 @@ body {
 .navbar .navbar-nav .nav-link {
     color: var(--white);
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: 0.3s ease;
     padding: 5px;
 }
