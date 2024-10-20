@@ -87,6 +87,13 @@ body {
     color: var(--black);
 }
 
+/* class dropdown-menu */
+.navbar .dropdown-menu {
+    position: relative;
+    top: 100%;
+    left: -50%;
+}
+
 
 /* halaman header */
 header {
@@ -803,10 +810,10 @@ footer .sosial i {
         height: auto;
     }
 
-    .navbar .btn {
+    .navbar .dropdown-menu {
+        position: relative;
         top: 0;
-        left: 25%;
-        width: 200px;
+        left: 0;
     }
 
     header .container h1 {
@@ -946,12 +953,12 @@ footer .sosial i {
         height: auto;
     }
 
-    .navbar .btn {
+    .navbar .dropdown-menu {
+        position: relative;
         top: 0;
-        left: 25%;
-        width: 200px;
+        left: 0;
     }
-
+    
     header .container .content h1 {
         font-size: 2rem;
     }
