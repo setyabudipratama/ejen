@@ -26,6 +26,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -39,12 +45,6 @@
                                         class="fa-brands fa-linkedin-in"></i>setya budi</a>
                             </li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
                     </li>
                 </ul>
             </div>
@@ -245,21 +245,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
         integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        const btn = document.querySelector('#pilar .btn');
-        btn.addEventListener('click', () => {
-            window.location.href = 'pilar.html'
-        });
-
-        const readMore = document.querySelector('header button');
-        readMore.addEventListener('click', () => {
-            const pilar = document.getElementById('pilar');
-            pilar.scrollIntoView({ behavior: 'smooth' });
-        });
-
-        const textPilar = document.querySelector('#pilar .desc p');
-        textPilar.innerHTML = "M.A.T.A. <em>(Meta Advance Tactical Agency)</em> adalah agensi di Cyberaya yang didirikan oleh Dato' Othman dan dibagi oleh empat pilar";
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
