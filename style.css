@@ -658,7 +658,7 @@ header .container .content .fa-arrow-down {
     position: absolute;
     top: 230px;
     opacity: 0;
-    transform: translateX(-20%);
+    transform: translateX(-30%);
     transition: 0.5s ease;
 }
 
@@ -669,8 +669,12 @@ header .container .content .fa-arrow-down {
     position: absolute;
     top: 260px;
     opacity: 0;
-    transform: translateX(18%);
+    transform: translateX(30%);
     transition: 0.5s ease;
+}
+
+#ejen .container .slider .profil:nth-child(4) span:nth-child(3) {
+    transform: translateX(15%);
 }
 
 #ejen .container .slider .profil span:nth-child(4) {
