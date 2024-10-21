@@ -174,3 +174,71 @@ navItemBaru5.addEventListener('click', () => {
     const other = document.getElementById('other');
     other.scrollIntoView({ behavior: 'smooth' });
 });
+
+
+// ambil parent id neuro
+const neuroElements = document.querySelectorAll('#neuro .card-body');
+neuroElements.forEach(function(bg) {
+    bg.style.backgroundColor = 'yellow';
+});
+
+const neuroH2 = document.querySelectorAll('#neuro .card-body h2');
+neuroH2.forEach(function(text) {
+    text.style.color = 'black';
+});
+
+const neuroSpan = document.querySelectorAll('#neuro .card-body span');
+neuroSpan.forEach(function(text) {
+    text.style.color = 'black';
+});
+
+
+// ambil parent id tekno
+const teknoElements = document.querySelectorAll('#tekno .card-body');
+teknoElements.forEach(function(bg) {
+    bg.style.backgroundColor = 'red';
+});
+
+const teknoH2 = document.querySelectorAll('#tekno .card-body h2');
+teknoH2.forEach(function(text) {
+    text.style.color = 'black';
+});
+
+const teknoSpan = document.querySelectorAll('#tekno .card-body span');
+teknoSpan.forEach(function(text) {
+    text.style.color = 'black';
+});
+
+
+// ambil parent id inviso
+const invisoElements = document.querySelectorAll('#inviso .card-body');
+invisoElements.forEach(function(bg) {
+    bg.style.backgroundColor = 'grey';
+});
+
+const invisoH2 = document.querySelectorAll('#inviso .card-body h2');
+invisoH2.forEach(function(text) {
+    text.style.color = 'black';
+});
+
+const invisoSpan = document.querySelectorAll('#inviso .card-body span');
+invisoSpan.forEach(function(text) {
+    text.style.color = 'black';
+});
+
+
+// ambil parent id kombat
+const kombatElements = document.querySelectorAll('#kombat .card-body');
+kombatElements.forEach(function(bg) {
+    bg.style.backgroundColor = 'blue';
+});
+
+const kombatH2 = document.querySelectorAll('#kombat .card-body h2');
+kombatH2.forEach(function(text) {
+    text.style.color = 'white';
+});
+
+const kombatSpan = document.querySelectorAll('#kombat .card-body span');
+kombatSpan.forEach(function(text) {
+    text.style.color = 'white';
+});
