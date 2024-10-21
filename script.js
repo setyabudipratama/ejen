@@ -150,3 +150,27 @@ navItemBaru4.addEventListener('click', () => {
     const topEjen = document.getElementById('ejen');
     topEjen.scrollIntoView({ behavior: 'smooth' });
 });
+
+
+// buat li baru kelima
+const navItemBaru5 = document.createElement('li');
+// masukkan ke parent dan sibling paling akhir
+navbarNav.insertBefore(navItemBaru5, liAkhir);
+// tambah atribut
+navItemBaru5.setAttribute('class', 'nav-item');
+// buat a baru
+const aBaru5 = document.createElement('a');
+// buat teks
+const textBaru5 = document.createTextNode('Other');
+// masukkan teks
+aBaru5.appendChild(textBaru5);
+// masukkan tag a ke parent
+navItemBaru5.appendChild(aBaru5);
+// tambah kelas
+aBaru5.setAttribute('class', 'nav-link');
+navItemBaru5.style.cursor = 'pointer';
+// fungsi untuk scroll ke pilar
+navItemBaru5.addEventListener('click', () => {
+    const other = document.getElementById('other');
+    other.scrollIntoView({ behavior: 'smooth' });
+});
