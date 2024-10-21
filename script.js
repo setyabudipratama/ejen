@@ -242,3 +242,52 @@ const kombatSpan = document.querySelectorAll('#kombat .card-body span');
 kombatSpan.forEach(function(text) {
     text.style.color = 'white';
 });
+
+
+// tambah anggota inviso
+// ambil parent
+const other = document.querySelector('#other .container .slider');
+// ambil sibling setelahnya
+const sibling = document.querySelector('#other .container .slider .profil:nth-child(9)');
+// buat card baru
+const cardBaru = document.createElement('div');
+// masukkan tag baru
+other.insertBefore(cardBaru, sibling);
+// tambah attribut
+cardBaru.setAttribute('class', 'profil');
+cardBaru.setAttribute('id', 'inviso');
+
+// buat tag img
+const imgBaru = document.createElement('img');
+// buat src
+const srcBaru = document.createAttribute('src');
+// masukkan src
+srcBaru.value = 'gambar/comot.jpeg';
+// masukkan img ke card
+cardBaru.appendChild(imgBaru);
+// masukkan src ke img
+imgBaru.setAttributeNode(srcBaru);
+
+// buat element card-body
+const cardBodyBaru = document.createElement('div');
+// masukkan card-body ke card
+cardBaru.appendChild(cardBodyBaru);
+// tambah attribut
+cardBodyBaru.setAttribute('class', 'card-body');
+cardBodyBaru.style.backgroundColor = 'grey';
+
+// buat element h2
+const h2Baru = document.createElement('h2');
+// buat teks
+h2Baru.innerHTML = 'Ejen Comot';
+// masukkan h2 ke card-body
+cardBodyBaru.appendChild(h2Baru);
+h2Baru.style.color = 'black';
+
+// buat element span
+const spanBaru = document.createElement('span');
+// buat teks
+spanBaru.innerHTML = 'Pilar Inviso';
+// masukkan span ke card-body
+cardBodyBaru.appendChild(spanBaru);
+spanBaru.style.color = 'black';
