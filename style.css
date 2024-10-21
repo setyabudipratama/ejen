@@ -347,11 +347,11 @@ header .container .content .fa-arrow-down {
 /* tag img */
 #ketua .container .slider .profil img {
     width: 200px;
-    height: 300px;  /* tampilan awal */
+    height: 300px;
     border-radius: 10px;
     object-fit: cover;
     margin-top: 20px;
-    z-index: 1;  /* tampilan awal */
+    z-index: 1;  /* tingkat 1 */
     box-shadow: 5px 5px 10px var(--black);
     transition: 0.5s ease;
 }
@@ -368,19 +368,19 @@ header .container .content .fa-arrow-down {
     bottom: 0;
     border-radius: 0 0 10px 10px;
     transform: translateY(-20%); /* tampilan awal */
-    z-index: 0;  /* tampilan awal */
+    z-index: 0;  /* dibawah tingkat 1 / default */
     transition: all 0.5s ease;
 }
 
-/* tampilan akhir hover class card-body */
+/* hover class card-body */
 #ketua .container .slider .profil:hover .card-body {
-    transform: translateY(0);
+    transform: translateY(0); /* tampilan akhir */
 }
 
-/* tampilan akhir hover tag img */
+/* hover tag img */
 #ketua .container .slider .profil:hover img {
-    height: 200px;
-    border-radius: 10px 10px 0 0;
+    height: 200px; /* menurunkan tinggi img */
+    border-radius: 10px 10px 0 0; /* menghapus border radius bawah */
     box-shadow: none;
 }
 
