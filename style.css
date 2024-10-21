@@ -278,15 +278,15 @@ header .container .content .fa-arrow-down {
 }
 
 #pilar .galery .image:nth-child(2) img {
-    animation-delay: 0.4s !important;
+    animation-delay: 0.5s !important;
 }
 
 #pilar .galery .image:nth-child(3) img {
-    animation-delay: 0.8s !important;
+    animation-delay: 1s !important;
 }
 
 #pilar .galery .image:last-child img {
-    animation-delay: 1s !important;
+    animation-delay: 1.5s !important;
 }
 
 
