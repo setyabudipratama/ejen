@@ -974,13 +974,22 @@ footer .sosial i {
     }
 
     #pilar .desc h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+    }
+
+    #pilar .desc p {
+        font-size: 1rem;
     }
 
     #pilar .galery {
         top: -60px;
         left: 0;
-        row-gap: 10px;
+        row-gap: 40px;
+    }
+
+    #pilar .galery .image {
+        width: 150px;
+        height: 150px;
     }
 
     #ketua,
