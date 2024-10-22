@@ -291,3 +291,32 @@ spanBaru.innerHTML = 'Pilar Inviso';
 // masukkan span ke card-body
 cardBodyBaru.appendChild(spanBaru);
 spanBaru.style.color = 'black';
+
+
+// beri class khusus pada ejen yang telah gugur
+// ambil parent
+const clsZain = document.querySelector('#ketua .profil');
+const clsDjin = document.querySelector('#ketua .profil:nth-child(3)');
+const clsAliya = document.querySelector('#top .profil:nth-child(2)');
+// tambah kelas
+clsZain.classList.add('gugur');
+clsDjin.classList.add('gugur');
+clsAliya.classList.add('gugur');
+
+
+// efek greyscale pada ejen yang gugur
+const gugur = document.querySelectorAll('.gugur');
+const ejenZain = document.querySelector('#ketua .gugur img');
+const ejenDjin = document.querySelector('#ketua .gugur img');
+const ejenAliya = document.querySelector('#top .gugur img');
+
+gugur.forEach(function(filter) {
+    filter.style.filter = 'grayscale(100%)';
+    filter.style.transition = 'all 0.5s ease';
+    filter.addEventListener('mouseenter', function() {
+        this.style.filter = 'grayscale(0%)';
+    });
+    filter.addEventListener('mouseleave', function() {
+        this.style.filter = 'grayscale(100%)';
+    });
+});
