@@ -467,7 +467,7 @@ Object.assign(prevBtn.style, {
     fontSize: '1.5rem',
     cursor: 'pointer',
     position: 'absolute',
-    top: '31%',
+    top: '31.5%',
     left: '11%',
     borderRadius: '50%',
     width: '35px',
@@ -475,13 +475,14 @@ Object.assign(prevBtn.style, {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    border: 'none',
     zIndex: '5',
 })
 Object.assign(nextBtn.style, {
     fontSize: '1.5rem',
     cursor: 'pointer',
     position: 'absolute',
-    top: '31%',
+    top: '31.5%',
     left: '37.5%',
     borderRadius: '50%',
     width: '35px',
@@ -489,6 +490,7 @@ Object.assign(nextBtn.style, {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    border: 'none',
     zIndex: '5',
 })
 
