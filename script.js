@@ -648,7 +648,7 @@ function applyResponsiveStyles() {
             height: '100vh',
         });
         Object.assign(h2.style, {
-            fontSize: '1.2rem',
+            fontSize: '1.5rem',
         });
         Object.assign(container.style, {
             height: '80vh',
