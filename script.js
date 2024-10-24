@@ -320,3 +320,406 @@ gugur.forEach(function(filter) {
         this.style.filter = 'grayscale(100%)';
     });
 });
+
+
+// tambah halaman project iris
+// ambil parent
+const body = document.querySelector('body');
+// ambil sibling setelahnya
+const ketua = document.getElementById('ketua');
+// tag section
+const iris = document.createElement('section');
+// masukkan element baru
+body.insertBefore(iris, ketua);
+// tambah attribut
+iris.setAttribute('id', 'iris');
+const irisStyles = document.querySelector('#iris');
+Object.assign(irisStyles.style, {
+    width: '100%',
+    height: '95vh',
+    background: 'linear-gradient(to left, black 0%, skyblue 100%)',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center'
+});
+
+// class container
+const container = document.createElement('div');
+// masukkan container ke iris
+iris.appendChild(container);
+// tambah attribut
+container.setAttribute('class', 'container');
+Object.assign(container.style, {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '90%',
+    height: '90%',
+    margin: '0 auto'
+});
+
+// tambah tag h2
+const h2 = document.createElement('h2');
+// buat teks
+const textH2 = document.createTextNode('Project Iris');
+// masukkan teks
+h2.appendChild(textH2);
+// masukkan tag h2 ke parent
+container.appendChild(h2);
+const h2Styles = document.querySelector('#iris h2');
+Object.assign(h2Styles.style, {
+    color: '#ffffff',
+    fontSize: '1.5rem',
+    fontFamily: 'pacifico',
+    position: 'relative',
+    top: '0',
+    margin: '0',
+    cursor: 'default'
+});
+
+// class content
+const content = document.createElement('div');
+// insertAdjacentElement untuk menambahkan elemen ke sibling
+// afterend untuk menambahkan elemen setelahnya
+// h2.insertAdjacentElement('afterend', content);
+container.appendChild(content);
+content.setAttribute('class', 'content');
+Object.assign(content.style, {
+    width: '100%',
+    minHeight: '50vh',
+    display: 'flex',
+    flexWrap: 'wrap-reverse',
+    flexDirection: 'row',
+    alignItems: 'center'
+});
+
+// class image
+const image = document.createElement('div');
+content.appendChild(image);
+image.setAttribute('class', 'image');
+Object.assign(image.style, {
+    width: '40%',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    rowGap: '10px'
+});
+
+// class image2
+const image2 = document.createElement('div');
+image.appendChild(image2);
+image2.setAttribute('class', 'image2');
+Object.assign(image2.style, {
+    width: '250px',
+    height: '200px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'hidden',
+});
+
+// tag img
+const img = document.createElement('img');
+// masukkan img ke image2
+image2.appendChild(img);
+// tambah attribut
+img.setAttribute('src', 'gambar/iris.jpg');
+img.setAttribute('class', 'slide');
+Object.assign(img.style, {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    marginTop: '50px',
+    display: 'none',
+    transition: 'all 0.5s ease',
+});
+
+// tag img 2
+const img2 = document.createElement('img');
+// masukkan img ke image2
+image2.appendChild(img2);
+// tambah attribut
+img2.setAttribute('src', 'gambar/Ejen Alicia (1).jpeg');
+img2.setAttribute('class', 'slide');
+Object.assign(img2.style, {
+    width: '250px',
+    height: '200px',
+    objectFit: 'cover',
+    display: 'none',
+    transition: 'all 0.5s ease',
+});
+
+// class btn
+const prevBtn = document.createElement('button');
+const nextBtn = document.createElement('button');
+image.appendChild(prevBtn);
+image.appendChild(nextBtn);
+prevBtn.setAttribute('class', 'prev');
+nextBtn.setAttribute('class', 'next');
+prevBtn.innerHTML = '<i class="fas fa-angle-left"></i>';
+nextBtn.innerHTML = '<i class="fas fa-angle-right"></i>';
+Object.assign(prevBtn.style, {
+    fontSize: '1.5rem',
+    cursor: 'pointer',
+    position: 'absolute',
+    top: '31%',
+    left: '11%',
+    borderRadius: '50%',
+    width: '35px',
+    height: '35px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: '5',
+})
+Object.assign(nextBtn.style, {
+    fontSize: '1.5rem',
+    cursor: 'pointer',
+    position: 'absolute',
+    top: '31%',
+    left: '37.5%',
+    borderRadius: '50%',
+    width: '35px',
+    height: '35px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: '5',
+})
+
+// index yang aktif
+let currentIndex = 0; 
+const slides = document.querySelectorAll('.slide');
+// menghitung jumlah slide
+const totalSlides = slides.length;
+
+// fungsi untuk menampilkan slide berdasarkan index yang aktif
+function showSlides() {
+    slides.forEach((slide, i) => {
+        // menghilangkan gambar dan hapus kelas aktif dari semua gambar
+        slide.style.display = 'none';
+        slide.classList.remove('active');
+        if (i === currentIndex) {
+            // tampilkan gambar yang aktif
+            slide.style.display = 'block';
+            // tambahkan kelas aktif
+            slide.classList.add('active');
+        }
+    });
+}
+
+// panggil fungsi
+showSlides();
+
+// event listener untuk tombol next
+document.querySelector('.next').addEventListener('click', function () {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlides();
+});
+
+// event listener untuk tombol prev
+document.querySelector('.prev').addEventListener('click', function () {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    showSlides();
+});
+
+// tag span
+const span = document.createElement('span');
+image2.insertBefore(span, img2);
+const textSpan = document.createTextNode('I.R.I.S.');
+span.appendChild(textSpan);
+Object.assign(span.style, {
+    position: 'relative',
+    top: '-50px',
+    fontSize: '1rem',
+    color: '#ffffff',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    cursor: 'default',
+    opacity: '0',
+    transform: 'translateY(50%)',
+    transition: 'all 0.5s ease'
+});
+
+img.addEventListener('mouseenter', function () {
+    span.style.opacity = '1';
+    span.style.transform = 'translateY(0)';
+    img.style.filter = 'brightness(0.7)';
+});
+img.addEventListener('mouseleave', function () {
+    span.style.opacity = '0';
+    span.style.transform = 'translateY(50%)';
+    img.style.filter = 'brightness(1)';
+});
+
+// tag span2
+const span2 = document.createElement('span');
+image2.appendChild(span2);
+const textSpan2 = document.createTextNode('Ejen Alicia');
+span2.appendChild(textSpan2);
+Object.assign(span2.style, {
+    position: 'relative',
+    top: '-50px',
+    fontSize: '1rem',
+    color: '#ffffff',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    cursor: 'default',
+    opacity: '0',
+    transform: 'translateY(50%)',
+    transition: 'all 0.5s ease'
+});
+
+img2.addEventListener('mouseenter', function () {
+    span2.style.opacity = '1';
+    span2.style.transform = 'translateY(0)';
+    img2.style.filter = 'brightness(0.7)';
+});
+img2.addEventListener('mouseleave', function () {
+    span2.style.opacity = '0';
+    span2.style.transform = 'translateY(50%)';
+    img2.style.filter = 'brightness(1)';
+});
+
+// class desc
+const desc = document.createElement('div');
+content.appendChild(desc);
+desc.setAttribute('class', 'desc');
+Object.assign(desc.style, {
+    width: '60%',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    rowGap: '10px'
+});
+
+// tag h5
+const h5 = document.createElement('h5');
+// masukkan h5 ke desc
+desc.appendChild(h5);
+// buat teks
+const textH5 = document.createTextNode('I.R.I.S');
+// masukkan teks
+h5.appendChild(textH5);
+Object.assign(h5.style, {
+    color: '#ffffff',
+    fontSize: '1.3rem',
+    fontFamily: 'sans-serif',
+    position: 'relative',
+    top: '0',
+    margin: '0',
+    cursor: 'default'
+});
+
+// tag p
+const p = document.createElement('p');
+// masukkan p ke desc
+desc.appendChild(p);
+// buat teks
+const textP = document.createTextNode('IRIS (Infinity Retinal Intelligence System) adalah perangkat yang diciptakan oleh ejen Aliya untuk kemajuan M.A.T.A. dan sebelumnya digunakan oleh Ali karena ketidak sengajaan dalam pertempuran. Setelah melewati berbagai akademi dan pertandingan arena, I.R.I.S. secara resmi digunakan oleh ejen Alicia dari pilar neuro.');
+// masukkan teks
+p.appendChild(textP);
+Object.assign(p.style, {
+    color: '#ffffff',
+    fontSize: '1rem',
+    fontFamily: 'sans-serif',
+    position: 'relative',
+    top: '0',
+    margin: '0',
+    textAlign: 'justify',
+    cursor: 'default'
+});
+
+// responsive web
+function applyResponsiveStyles() {
+    if (window.innerWidth < 767) {
+        Object.assign(iris.style, {
+            height: '100vh',
+        });
+        Object.assign(h2.style, {
+            fontSize: '1.2rem',
+        });
+        Object.assign(container.style, {
+            height: '80vh',
+        });
+        Object.assign(content.style, {
+            height: '90%',
+        });
+        Object.assign(image.style, {
+            width: '100%',
+            height: '35vh',
+        });
+        Object.assign(prevBtn.style, {
+            position: 'absolute',
+            top: '42.5%',
+            left: '11%',
+        });
+        Object.assign(nextBtn.style, {
+            position: 'absolute',
+            top: '42.5%',
+            left: '82%',
+        });
+        Object.assign(desc.style, {
+            width: '100%',
+            height: '30vh',
+        });
+        Object.assign(h5.style, {
+            fontSize: '1rem',
+        });
+        Object.assign(p.style, {
+            fontSize: '0.8rem',
+            textAlign: 'center',
+            width: '100%',
+        });
+    } else if (window.innerWidth >= 767 && window.innerWidth < 1024) {
+        Object.assign(prevBtn.style, {
+            position: 'absolute',
+            top: '45%',
+            left: '9%',
+        });
+        Object.assign(nextBtn.style, {
+            position: 'absolute',
+            top: '45%',
+            left: '35%',
+        });
+    }
+}
+
+// event listener
+applyResponsiveStyles();
+// saat layar mengubah ukuran
+window.addEventListener('resize', applyResponsiveStyles);
+
+// buat li baru keenam
+const navItemBaru6 = document.createElement('li');
+// masukkan ke parent dan sibling paling akhir
+navbarNav.insertBefore(navItemBaru6, navItemBaru1);
+// tambah atribut
+navItemBaru6.setAttribute('class', 'nav-item');
+// buat a baru
+const aBaru6 = document.createElement('a');
+// buat teks
+const textBaru6 = document.createTextNode('I.R.I.S.');
+// masukkan teks
+aBaru6.appendChild(textBaru6);
+// masukkan tag a ke parent
+navItemBaru6.appendChild(aBaru6);
+// tambah kelas
+aBaru6.setAttribute('class', 'nav-link');
+navItemBaru6.style.cursor = 'pointer';
+// fungsi untuk scroll ke pilar
+navItemBaru6.addEventListener('click', () => {
+    const other = document.getElementById('iris');
+    other.scrollIntoView({ behavior: 'smooth' });
+});
