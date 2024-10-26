@@ -103,9 +103,9 @@ navItemBaru2.addEventListener('click', () => {
     const top = document.getElementById('top');
     top.scrollIntoView({ behavior: 'smooth' });
 });
-
 const textSenior = document.querySelector('#top h1');
 textSenior.innerHTML = 'Senior';
+
 
 // buat li baru ketiga
 const navItemBaru3 = document.createElement('li');
@@ -646,6 +646,50 @@ Object.assign(p.style, {
     cursor: 'default'
 });
 
+// tag button
+const button = document.createElement('button');
+// masukkan button ke parent
+iris.appendChild(button);
+// buat teks
+const textButton = document.createTextNode('Read More');
+// masukkan teks
+button.appendChild(textButton);
+button.setAttribute('class', 'btn btn-outline-primary');
+button.setAttribute('id', 'irisPage');
+Object.assign(button.style, {
+    position: 'absolute',
+    top: '34%',
+    right: '10%',
+    zIndex: '4',
+    width: '140px',
+    height: '50px',
+    background: 'none',
+    border: '2px solid #dadada',
+    color: '#dadada',
+    fontSize: '1.1rem',
+    fontFamily: 'sans-serif',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '10px',
+    boxShadow: '5px 5px 10px #101010',
+    cursor: 'pointer',
+    transition: 'all 0.3s ease'
+});
+
+button.addEventListener('mouseenter', function () {
+    button.style.background = '#dadada';
+    button.style.color = '#101010';
+    button.style.boxShadow = 'none';
+    button.style.transform = 'scale(1.1)';
+});
+button.addEventListener('mouseleave', function () {
+    button.style.background = 'none';
+    button.style.color = '#dadada';
+    button.style.boxShadow = '5px 5px 10px #101010';
+    button.style.transform = 'scale(1)';
+});
+
 // responsive web
 function applyResponsiveStyles() {
     if (window.innerWidth < 767) {
@@ -690,6 +734,11 @@ function applyResponsiveStyles() {
             textAlign: 'center',
             width: '100%',
         });
+        Object.assign(button.style, {
+           position: 'absolute',
+           top: '44%',
+           left: '50%',
+        });
     } else if (window.innerWidth >= 767 && window.innerWidth < 1024) {
         Object.assign(prevBtn.style, {
             position: 'absolute',
@@ -700,6 +749,11 @@ function applyResponsiveStyles() {
             position: 'absolute',
             top: '45%',
             left: '35%',
+        });
+        Object.assign(button.style, {
+            position: 'absolute',
+            top: '50%',
+            left: '70%',
         });
     }
 }
@@ -730,4 +784,9 @@ navItemBaru6.style.cursor = 'pointer';
 navItemBaru6.addEventListener('click', () => {
     const other = document.getElementById('iris');
     other.scrollIntoView({ behavior: 'smooth' });
+});
+
+const irisPage = document.getElementById('irisPage');
+irisPage.addEventListener('click', () => {
+    window.location.href = "iris.html";
 });
