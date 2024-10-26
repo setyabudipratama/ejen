@@ -14,6 +14,7 @@ readMore.addEventListener('click', () => {
 // rubah teks
 const textPilar = document.querySelector('#pilar .desc p');
 textPilar.innerHTML = "M.A.T.A. <em>(Meta Advance Tactical Agency)</em> adalah agensi di Cyberaya yang didirikan oleh Dato' Othman dan dibagi oleh empat pilar";
+textPilar.style.fontSize = '1rem';
 
 // ganti navbar about ke pilar
 // ambil parent
@@ -89,7 +90,7 @@ navItemBaru2.setAttribute('class', 'nav-item');
 // buat a baru sebagai child
 const aBaru2 = document.createElement('a');
 // buat teks
-const textBaru2 = document.createTextNode('Top Ejen');
+const textBaru2 = document.createTextNode('Senior');
 // masukkan teks
 aBaru2.appendChild(textBaru2);
 // tambah tag a ke parent
@@ -103,6 +104,8 @@ navItemBaru2.addEventListener('click', () => {
     top.scrollIntoView({ behavior: 'smooth' });
 });
 
+const textSenior = document.querySelector('#top h1');
+textSenior.innerHTML = 'Senior';
 
 // buat li baru ketiga
 const navItemBaru3 = document.createElement('li');
@@ -646,6 +649,9 @@ Object.assign(p.style, {
 // responsive web
 function applyResponsiveStyles() {
     if (window.innerWidth < 767) {
+        Object.assign(textPilar.style, {
+            fontSize: '0.8rem',
+        });
         Object.assign(iris.style, {
             height: '100vh',
         });
