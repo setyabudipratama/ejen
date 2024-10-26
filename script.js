@@ -57,6 +57,11 @@ const navbarCollapse = document.querySelector('.navbar .navbar-collapse');
 navbarCollapse.classList.add('justify-content-end');
 
 
+// rubah zIndex navbar
+const navbar = document.querySelector('.navbar');
+navbar.style.zIndex = '1000';
+
+
 // tambah nav-item
 // buat nav-item
 const navItemBaru1 = document.createElement('li');
