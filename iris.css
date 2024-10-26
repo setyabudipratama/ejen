@@ -236,7 +236,7 @@ body {
 
 /* class btn */
 #sejarah .container .content .other .btn {
-    width: 150px;
+    width: 190px;
     height: 40px;
     position: absolute;
     bottom: 0;
@@ -413,22 +413,22 @@ footer .sosial i {
     #sejarah .container .content .other .tragedi h3 {
         position: relative;
         top: 0;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     #sejarah .container .content .other .tragedi span {
         position: relative;
         top: 0;
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
 
     #sejarah .container .content .other .tragedi img:hover {
-        transform: translate(-55px);
+        transform: translate(-60px);
         border-radius: 10px 0 0 10px;
     }
 
     #sejarah .container .content .other .tragedi img:hover+.card-body {
-        transform: translate(60px);
+        transform: translate(65px);
         border-radius: 0 10px 10px 0;
     }
 
@@ -486,7 +486,7 @@ footer .sosial i {
     #sejarah .container .content .other .btn {
         position: relative;
         top: 0;
-        left: 75%;
+        left: 50%;
     }
 
     #sejarah .container .content .other .tragedi img {
