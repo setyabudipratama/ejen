@@ -11,6 +11,7 @@ readMore.addEventListener('click', () => {
     pilar.scrollIntoView({ behavior: 'smooth' });
 });
 
+
 // rubah teks
 const textPilar = document.querySelector('#pilar .desc p');
 textPilar.innerHTML = "M.A.T.A. <em>(Meta Advance Tactical Agency)</em> adalah agensi di Cyberaya yang didirikan oleh Dato' Othman dan dibagi oleh empat pilar";
@@ -37,6 +38,10 @@ aPilar.addEventListener('click', () => {
     const pilar = document.getElementById('pilar');
     pilar.scrollIntoView({ behavior: 'smooth' });
 });
+
+// rubah tinggi button
+const btnPilar = document.querySelector('#pilar .btn');
+btnPilar.style.height = '45px';
 
 // fungsi untuk scroll ke halaman utama
 const home = document.querySelector('.nav-item:first-child .nav-link');
@@ -662,7 +667,7 @@ Object.assign(button.style, {
     right: '10%',
     zIndex: '4',
     width: '140px',
-    height: '50px',
+    height: '45px',
     background: 'none',
     border: '2px solid #dadada',
     color: '#dadada',
@@ -736,7 +741,7 @@ function applyResponsiveStyles() {
         });
         Object.assign(button.style, {
            position: 'absolute',
-           top: '44%',
+           top: '45%',
            left: '50%',
         });
     } else if (window.innerWidth >= 767 && window.innerWidth < 1024) {
