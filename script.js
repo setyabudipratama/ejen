@@ -729,20 +729,22 @@ function applyResponsiveStyles() {
         Object.assign(image.style, {
             width: '100%',
             height: '35vh',
-        });
-        Object.assign(image2.style, {
             position: 'relative',
             top: '-5%',
         });
+        Object.assign(image2.style, {
+            position: 'relative',
+            top: '0',
+        });
         Object.assign(prevBtn.style, {
             position: 'absolute',
-            top: '41.9%',
-            left: '21.3%',
+            top: '43%',
+            left: '15%',
         });
         Object.assign(nextBtn.style, {
             position: 'absolute',
-            top: '41.9%',
-            left: '70%',
+            top: '43%',
+            left: '75%',
         });
         Object.assign(desc.style, {
             width: '100%',
