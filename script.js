@@ -335,6 +335,14 @@ gugur.forEach(function(filter) {
 });
 
 
+// rubah posisi header
+const containerHeader = document.querySelector('header .container');
+Object.assign(containerHeader.style, {
+    position: 'relative',
+    top: '28%',
+});
+
+
 // tambah halaman project iris
 // ambil parent
 const body = document.querySelector('body');
@@ -481,7 +489,7 @@ Object.assign(prevBtn.style, {
     cursor: 'pointer',
     position: 'absolute',
     top: '31.5%',
-    left: '11%',
+    left: '8.5%',
     borderRadius: '50%',
     width: '35px',
     height: '35px',
@@ -496,7 +504,7 @@ Object.assign(nextBtn.style, {
     cursor: 'pointer',
     position: 'absolute',
     top: '31.5%',
-    left: '37.5%',
+    left: '36%',
     borderRadius: '50%',
     width: '35px',
     height: '35px',
@@ -722,15 +730,19 @@ function applyResponsiveStyles() {
             width: '100%',
             height: '35vh',
         });
+        Object.assign(image2.style, {
+            position: 'relative',
+            top: '-15px',
+        });
         Object.assign(prevBtn.style, {
             position: 'absolute',
-            top: '42.5%',
-            left: '11%',
+            top: '41.9%',
+            left: '21.3%',
         });
         Object.assign(nextBtn.style, {
             position: 'absolute',
-            top: '42.5%',
-            left: '82%',
+            top: '41.9%',
+            left: '70%',
         });
         Object.assign(desc.style, {
             width: '100%',
@@ -752,12 +764,12 @@ function applyResponsiveStyles() {
     } else if (window.innerWidth >= 767 && window.innerWidth < 1024) {
         Object.assign(prevBtn.style, {
             position: 'absolute',
-            top: '45%',
+            top: '45.1%',
             left: '9%',
         });
         Object.assign(nextBtn.style, {
             position: 'absolute',
-            top: '45%',
+            top: '45.1%',
             left: '35%',
         });
         Object.assign(button.style, {
