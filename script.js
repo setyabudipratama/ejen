@@ -732,7 +732,7 @@ function applyResponsiveStyles() {
         });
         Object.assign(image2.style, {
             position: 'relative',
-            top: '-15px',
+            top: '-5%',
         });
         Object.assign(prevBtn.style, {
             position: 'absolute',
@@ -747,6 +747,8 @@ function applyResponsiveStyles() {
         Object.assign(desc.style, {
             width: '100%',
             height: '30vh',
+            position: 'relative',
+            top: '5%',
         });
         Object.assign(h5.style, {
             fontSize: '1rem',
