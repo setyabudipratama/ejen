@@ -820,4 +820,4 @@ irisPage.addEventListener('click', () => {
 
 // rubah image ejen Alicia
 const ejenAliciaNeuro = document.querySelector('#ejen .profil:first-child img');
-ejenAliciaNeuro.src = 'gambar/ejen alicia pilar neuro.jpeg';s
+ejenAliciaNeuro.src = 'gambar/ejen alicia pilar neuro.jpeg';
