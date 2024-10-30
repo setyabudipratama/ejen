@@ -817,7 +817,6 @@ irisPage.addEventListener('click', () => {
     window.location.href = "iris.html";
 });
 
-
 // rubah image ejen Alicia
 const ejenAliciaNeuro = document.querySelector('#ejen .profil:first-child img');
 ejenAliciaNeuro.src = 'gambar/ejen alicia pilar neuro.jpeg';
