@@ -720,7 +720,7 @@ arena.setAttribute('id', 'arena');
 Object.assign(arena.style, {
     width: '100%',
     height: '100vh',
-    background: 'linear-gradient(to right, black 0%, yellow 100%)',
+    background: 'linear-gradient(to left, black 0%, purple 100%)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'
