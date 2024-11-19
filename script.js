@@ -20,7 +20,7 @@ textPilar.style.fontSize = '1rem';
 // ganti navbar about ke pilar
 // ambil parent
 const navItem = document.querySelector('.navbar .nav-item:nth-child(2)');
-// ambil child about
+// ambil sibling yang diganti
 const about = document.querySelector('.navbar .nav-item:nth-child(2) .nav-link');
 // buat tag a baru
 const aPilar = document.createElement('a');
@@ -46,7 +46,7 @@ btnPilar.style.height = '45px';
 // fungsi untuk scroll ke halaman utama
 const home = document.querySelector('.nav-item:first-child .nav-link');
 home.addEventListener('click', () => {
-    home.scrollIntoView({top: 0, behavior: 'smooth' });
+    home.scrollIntoView({ top: 0, behavior: 'smooth' });
 });
 
 
@@ -67,7 +67,7 @@ navbar.style.zIndex = '1000';
 const navItemBaru1 = document.createElement('li');
 // ambil parent
 const navbarNav = document.querySelector('.navbar .navbar-nav');
-// ambil child paling akhir
+// ambil sibling paling akhir
 const liAkhir = document.querySelector('.navbar .nav-item:last-child');
 // tambah nav-item
 navbarNav.insertBefore(navItemBaru1, liAkhir);
@@ -84,7 +84,7 @@ navItemBaru1.appendChild(aBaru1);
 // tambah kelas
 aBaru1.setAttribute('class', 'nav-link');
 navItemBaru1.style.cursor = 'pointer';
-
+// fungsi untuk scroll ke ketua pilar
 navItemBaru1.addEventListener('click', () => {
     const ketua = document.getElementById('ketua');
     ketua.scrollIntoView({ behavior: 'smooth' });
@@ -150,7 +150,7 @@ navItemBaru4.setAttribute('class', 'nav-item');
 // buat a baru sebagai sibling
 const aBaru4 = document.createElement('a');
 // buat teks
-const textBaru4 = document.createTextNode('Top Ejen in Akademi');
+const textBaru4 = document.createTextNode('Top Ejen');
 // masukkan teks
 aBaru4.appendChild(textBaru4);
 // masukkan tag a ke parent
@@ -191,68 +191,68 @@ navItemBaru5.addEventListener('click', () => {
 
 // ambil parent id neuro
 const neuroElements = document.querySelectorAll('#neuro .card-body');
-neuroElements.forEach(function(bg) {
+neuroElements.forEach(function (bg) {
     bg.style.backgroundColor = 'yellow';
 });
 
 const neuroH2 = document.querySelectorAll('#neuro .card-body h2');
-neuroH2.forEach(function(text) {
+neuroH2.forEach(function (text) {
     text.style.color = 'black';
 });
 
 const neuroSpan = document.querySelectorAll('#neuro .card-body span');
-neuroSpan.forEach(function(text) {
+neuroSpan.forEach(function (text) {
     text.style.color = 'black';
 });
 
 
 // ambil parent id tekno
 const teknoElements = document.querySelectorAll('#tekno .card-body');
-teknoElements.forEach(function(bg) {
+teknoElements.forEach(function (bg) {
     bg.style.backgroundColor = 'red';
 });
 
 const teknoH2 = document.querySelectorAll('#tekno .card-body h2');
-teknoH2.forEach(function(text) {
+teknoH2.forEach(function (text) {
     text.style.color = 'black';
 });
 
 const teknoSpan = document.querySelectorAll('#tekno .card-body span');
-teknoSpan.forEach(function(text) {
+teknoSpan.forEach(function (text) {
     text.style.color = 'black';
 });
 
 
 // ambil parent id inviso
 const invisoElements = document.querySelectorAll('#inviso .card-body');
-invisoElements.forEach(function(bg) {
+invisoElements.forEach(function (bg) {
     bg.style.backgroundColor = 'grey';
 });
 
 const invisoH2 = document.querySelectorAll('#inviso .card-body h2');
-invisoH2.forEach(function(text) {
+invisoH2.forEach(function (text) {
     text.style.color = 'black';
 });
 
 const invisoSpan = document.querySelectorAll('#inviso .card-body span');
-invisoSpan.forEach(function(text) {
+invisoSpan.forEach(function (text) {
     text.style.color = 'black';
 });
 
 
 // ambil parent id kombat
 const kombatElements = document.querySelectorAll('#kombat .card-body');
-kombatElements.forEach(function(bg) {
+kombatElements.forEach(function (bg) {
     bg.style.backgroundColor = 'blue';
 });
 
 const kombatH2 = document.querySelectorAll('#kombat .card-body h2');
-kombatH2.forEach(function(text) {
+kombatH2.forEach(function (text) {
     text.style.color = 'white';
 });
 
 const kombatSpan = document.querySelectorAll('#kombat .card-body span');
-kombatSpan.forEach(function(text) {
+kombatSpan.forEach(function (text) {
     text.style.color = 'white';
 });
 
@@ -323,13 +323,13 @@ const ejenZain = document.querySelector('#ketua .gugur img');
 const ejenDjin = document.querySelector('#ketua .gugur img');
 const ejenAliya = document.querySelector('#top .gugur img');
 
-gugur.forEach(function(filter) {
+gugur.forEach(function (filter) {
     filter.style.filter = 'grayscale(100%)';
     filter.style.transition = 'all 0.5s ease';
-    filter.addEventListener('mouseenter', function() {
+    filter.addEventListener('mouseenter', function () {
         this.style.filter = 'grayscale(0%)';
     });
-    filter.addEventListener('mouseleave', function() {
+    filter.addEventListener('mouseleave', function () {
         this.style.filter = 'grayscale(100%)';
     });
 });
@@ -381,16 +381,16 @@ Object.assign(container.style, {
     margin: '0 auto'
 });
 
-// tambah tag h2
-const h2 = document.createElement('h2');
+// tambah tag h1
+const h1 = document.createElement('h1');
 // buat teks
-const textH2 = document.createTextNode('Project Iris');
+const textH1 = document.createTextNode('Project Iris');
 // masukkan teks
-h2.appendChild(textH2);
-// masukkan tag h2 ke parent
-container.appendChild(h2);
-const h2Styles = document.querySelector('#iris h2');
-Object.assign(h2Styles.style, {
+h1.appendChild(textH1);
+// masukkan tag h1 ke parent
+container.appendChild(h1);
+const h1Styles = document.querySelector('#iris h1');
+Object.assign(h1Styles.style, {
     color: '#ffffff',
     fontSize: '1.5rem',
     fontFamily: 'pacifico',
@@ -488,7 +488,7 @@ Object.assign(prevBtn.style, {
     fontSize: '1.5rem',
     cursor: 'pointer',
     position: 'absolute',
-    top: '31.5%',
+    top: '28%',
     left: '8.5%',
     borderRadius: '50%',
     width: '35px',
@@ -503,7 +503,7 @@ Object.assign(nextBtn.style, {
     fontSize: '1.5rem',
     cursor: 'pointer',
     position: 'absolute',
-    top: '31.5%',
+    top: '28%',
     left: '36%',
     borderRadius: '50%',
     width: '35px',
@@ -516,7 +516,7 @@ Object.assign(nextBtn.style, {
 })
 
 // index yang aktif
-let currentIndex = 0; 
+let currentIndex = 0;
 const slides = document.querySelectorAll('.slide');
 // menghitung jumlah slide
 const totalSlides = slides.length;
@@ -676,7 +676,7 @@ button.setAttribute('class', 'btn btn-outline-primary');
 button.setAttribute('id', 'irisPage');
 Object.assign(button.style, {
     position: 'absolute',
-    top: '34%',
+    top: '31%',
     right: '10%',
     zIndex: '4',
     width: '140px',
@@ -708,6 +708,108 @@ button.addEventListener('mouseleave', function () {
     button.style.transform = 'scale(1)';
 });
 
+
+// tambah halaman gallery
+// sibling setelahnya
+const footer = document.querySelector('footer');
+const arena = document.createElement('section');
+// masukkan element baru
+footer.before(arena);
+// tambah attribute
+arena.setAttribute('id', 'arena');
+Object.assign(arena.style, {
+    width: '100%',
+    height: '100vh',
+    background: 'linear-gradient(to right, black 0%, yellow 100%)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+});
+
+// class container
+const containerArena = document.createElement('div');
+containerArena.setAttribute('class', 'container');
+// masukkan element baru
+arena.appendChild(containerArena);
+Object.assign(containerArena.style, {
+    width: '90%',
+    height: '90%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
+});
+
+// tag h1
+const h1Arena = document.createElement('h1')
+containerArena.appendChild(h1Arena);
+const textH1Arena = document.createTextNode('M.A.T.A. Arena');
+h1Arena.appendChild(textH1Arena);
+Object.assign(h1Arena.style, {
+    color: '#ffffff',
+    fontSize: '1.6rem',
+    fontFamily: 'pacifico',
+    position: 'relative',
+    top: '10%',
+    cursor: 'default'
+});
+
+// class content
+const contentArena = document.createElement('div');
+containerArena.appendChild(contentArena);
+contentArena.setAttribute('class', 'content');
+Object.assign(contentArena.style, {
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
+    top: '5%',
+});
+
+// tag img
+const imageArena = document.createElement('img');
+contentArena.appendChild(imageArena);
+imageArena.setAttribute('src', 'gambar/MATA ARENA.jpg');
+Object.assign(imageArena.style, {
+   width: '80%',
+   height: '80%',
+   objectFit: 'cover',
+   borderRadius: '10px',
+   transition: 'all 0.5s ease'
+});
+
+// tag h2
+const h2Arena = document.createElement('h2');
+contentArena.appendChild(h2Arena);
+const h2TextArena = document.createTextNode('Musim 3: Episode 11');
+h2Arena.appendChild(h2TextArena);
+Object.assign(h2Arena.style, {
+    color: '#ffffff',
+    fontSize: '1.4rem',
+    fontFamily: 'sans-serif',
+    position: 'relative',
+    top: '-70px',
+    zIndex: '100',
+    cursor: 'default',
+    opacity: '0',
+    transform: 'translateY(50px)',
+    transition: 'all 0.5s ease'
+});
+
+imageArena.addEventListener('mouseenter', function () {
+    h2Arena.style.opacity = '1';
+    h2Arena.style.transform = 'translateY(0)';
+    imageArena.style.filter = 'brightness(0.5)';
+});
+imageArena.addEventListener('mouseleave', function () {
+    h2Arena.style.opacity = '0';
+    h2Arena.style.transform = 'translateY(50px)';
+    imageArena.style.filter = '';
+});
+
 // responsive web
 function applyResponsiveStyles() {
     if (window.innerWidth < 767) {
@@ -717,14 +819,14 @@ function applyResponsiveStyles() {
         Object.assign(iris.style, {
             height: '100vh',
         });
-        Object.assign(h2.style, {
+        Object.assign(h1.style, {
             fontSize: '1.5rem',
         });
         Object.assign(container.style, {
             height: '80vh',
         });
         Object.assign(content.style, {
-            height: '90%',
+            height: '80%',
         });
         Object.assign(image.style, {
             width: '100%',
@@ -750,7 +852,7 @@ function applyResponsiveStyles() {
             width: '100%',
             height: '30vh',
             position: 'relative',
-            top: '5%',
+            top: '2%',
         });
         Object.assign(h5.style, {
             fontSize: '1rem',
@@ -762,24 +864,38 @@ function applyResponsiveStyles() {
         });
         Object.assign(button.style, {
            position: 'absolute',
-           top: '45%',
+           top: '39%',
            left: '50%',
+        });
+        Object.assign(h1Arena.style, {
+            fontSize: '1.5rem',
+        });
+        Object.assign(contentArena.style, {
+            width: '100%',
+        });
+        Object.assign(imageArena.style, {
+            width: '100%',
+            height: '60vh',
         });
     } else if (window.innerWidth >= 767 && window.innerWidth < 1024) {
         Object.assign(prevBtn.style, {
             position: 'absolute',
-            top: '45.1%',
+            top: '38.2%',
             left: '9%',
         });
         Object.assign(nextBtn.style, {
             position: 'absolute',
-            top: '45.1%',
+            top: '38.2%',
             left: '35%',
         });
         Object.assign(button.style, {
             position: 'absolute',
-            top: '50%',
+            top: '41%',
             left: '70%',
+        });
+        Object.assign(imageArena.style, {
+            width: '95%',
+            height: '60vh',
         });
     }
 }
@@ -816,6 +932,31 @@ const irisPage = document.getElementById('irisPage');
 irisPage.addEventListener('click', () => {
     window.location.href = "iris.html";
 });
+
+
+// buat li baru ketujuh
+const navItemBaru7 = document.createElement('li');
+// masukkan ke parent dan sibling paling akhir
+navbarNav.insertBefore(navItemBaru7, liAkhir);
+// tambah atribut
+navItemBaru7.setAttribute('class', 'nav-item');
+// buat a baru
+const aBaru7 = document.createElement('a');
+// buat teks
+const textBaru7 = document.createTextNode('arena');
+// masukkan teks
+aBaru7.appendChild(textBaru7);
+// masukkan tag a ke parent
+navItemBaru7.appendChild(aBaru7);
+// tambah kelas
+aBaru7.setAttribute('class', 'nav-link');
+navItemBaru7.style.cursor = 'pointer';
+// fungsi untuk scroll ke pilar
+navItemBaru7.addEventListener('click', () => {
+    const arena = document.getElementById('arena');
+    arena.scrollIntoView({ behavior: 'smooth' });
+});
+
 
 // rubah image ejen Alicia
 const ejenAliciaNeuro = document.querySelector('#ejen .profil:first-child img');
