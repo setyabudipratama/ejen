@@ -1154,7 +1154,7 @@ function applyResponsiveStyles() {
         inputEmail.style.width = '300px';
         opsiPilar.style.width = '300px';
         textArea.style.width = '300px';
-        buttonContact.style.left = '40%';
+        buttonContact.style.left = '35%';
     } else if (window.innerWidth >= 767 && window.innerWidth < 1024) {
         Object.assign(prevBtn.style, {
             position: 'absolute',
