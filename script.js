@@ -1065,6 +1065,7 @@ buttonContact.setAttribute('class', 'py-2 px-4');
 Object.assign(buttonContact.style, {
     backgroundColor: '#ffffff',
     color: 'black',
+    border: 'none',
     borderRadius: '10px',
     cursor: 'pointer',
     position: 'relative',
