@@ -490,7 +490,7 @@ Object.assign(prevBtn.style, {
     fontSize: '1.5rem',
     cursor: 'pointer',
     position: 'absolute',
-    top: '28%',
+    top: '25.2%',
     left: '8.5%',
     borderRadius: '50%',
     width: '35px',
@@ -505,7 +505,7 @@ Object.assign(nextBtn.style, {
     fontSize: '1.5rem',
     cursor: 'pointer',
     position: 'absolute',
-    top: '28%',
+    top: '25.2%',
     left: '36%',
     borderRadius: '50%',
     width: '35px',
@@ -678,7 +678,7 @@ button.setAttribute('class', 'btn btn-outline-primary');
 button.setAttribute('id', 'irisPage');
 Object.assign(button.style, {
     position: 'absolute',
-    top: '31%',
+    top: '28%',
     right: '10%',
     zIndex: '4',
     width: '140px',
@@ -1113,12 +1113,12 @@ function applyResponsiveStyles() {
         });
         Object.assign(prevBtn.style, {
             position: 'absolute',
-            top: '43%',
+            top: '44%',
             left: '15%',
         });
         Object.assign(nextBtn.style, {
             position: 'absolute',
-            top: '43%',
+            top: '44%',
             left: '75%',
         });
         Object.assign(desc.style, {
@@ -1137,7 +1137,7 @@ function applyResponsiveStyles() {
         });
         Object.assign(button.style, {
            position: 'absolute',
-           top: '39%',
+           top: '34%',
            left: '50%',
         });
         Object.assign(h1Arena.style, {
