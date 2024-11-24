@@ -1310,7 +1310,7 @@ send.addEventListener('click', (e) => {
     ];
     const pesan = encodeURIComponent(messageParts.join('\n'));
     // nomor
-    const nmor = "082264244554";
+    const nmor = "6282264244554";
     // buat link
     const url = `https://wa.me/${nmor}?text=${pesan}`;
     window.open(url);
