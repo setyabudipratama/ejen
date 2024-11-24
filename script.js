@@ -1044,7 +1044,7 @@ textArea.setAttribute('type', 'text');
 textArea.setAttribute('class', 'form-control');
 textArea.setAttribute('placeholder', 'question');
 textArea.setAttribute('required', '');
-textArea.setAttribute('id', 'exampleFormControlTextarea1');
+textArea.setAttribute('id', 'question');
 Object.assign(textArea.style, {
     width: '500px',
     heigth: '200px',
@@ -1053,7 +1053,7 @@ Object.assign(textArea.style, {
 // tag label
 const labelTextArea = document.createElement('label');
 textAreaDiv.appendChild(labelTextArea);
-labelTextArea.setAttribute('for', 'exampleFormControlTextarea1');
+labelTextArea.setAttribute('for', 'question');
 labelTextArea.setAttribute('class', 'form-label');
 labelTextArea.innerHTML = 'Question';
 
