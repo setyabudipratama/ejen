@@ -1313,5 +1313,5 @@ send.addEventListener('click', (e) => {
     const nmor = "082264244554";
     // buat link
     const url = `https://api.whatsapp.com/send?phone=${nmor}&text=${pesan}`;
-    window.open(url);
+    window.open(url, '_blank');
 });
