@@ -953,7 +953,7 @@ Object.assign(labelNeuro.style, {
 const inputNeuro = document.createElement('input');
 inputNeuro.setAttribute('type', 'radio');
 inputNeuro.setAttribute('name', 'pilar');
-inputNeuro.setAttribute('id', 'Neuro');
+inputNeuro.setAttribute('id', 'neuroCheck');
 labelNeuro.appendChild(inputNeuro);
 
 // tag label
@@ -972,7 +972,7 @@ Object.assign(labelTekno.style, {
 const inputTekno = document.createElement('input');
 inputTekno.setAttribute('type', 'radio');
 inputTekno.setAttribute('name', 'pilar');
-inputTekno.setAttribute('id', 'Tekno');
+inputTekno.setAttribute('id', 'teknoCheck');
 labelTekno.appendChild(inputTekno);
 
 // tag label
@@ -991,7 +991,7 @@ Object.assign(labelInviso.style, {
 const inputInviso = document.createElement('input');
 inputInviso.setAttribute('type', 'radio');
 inputInviso.setAttribute('name', 'pilar');
-inputInviso.setAttribute('id', 'Inviso');
+inputInviso.setAttribute('id', 'invisoCheck');
 labelInviso.appendChild(inputInviso);
 
 // tag label
@@ -1010,7 +1010,7 @@ Object.assign(labelKombat.style, {
 const inputKombat = document.createElement('input');
 inputKombat.setAttribute('type', 'radio');
 inputKombat.setAttribute('name', 'pilar');
-inputKombat.setAttribute('id', 'Kombat');
+inputKombat.setAttribute('id', 'kombatCheck');
 labelKombat.appendChild(inputKombat);
 
 // tag label
@@ -1029,7 +1029,7 @@ Object.assign(labelBelumPunya.style, {
 const inputBelumPunya = document.createElement('input');
 inputBelumPunya.setAttribute('type', 'radio');
 inputBelumPunya.setAttribute('name', 'pilar');
-inputBelumPunya.setAttribute('id', 'BelumPunyaPilar');
+inputBelumPunya.setAttribute('id', 'belumPunyaPilar');
 labelBelumPunya.appendChild(inputBelumPunya);
 
 // textarea-group
@@ -1062,6 +1062,7 @@ const buttonContact = document.createElement('button');
 formContact.appendChild(buttonContact);
 buttonContact.innerHTML = 'Send';
 buttonContact.setAttribute('class', 'py-2 px-4');
+buttonContact.setAttribute('id', 'send');
 Object.assign(buttonContact.style, {
     backgroundColor: '#ffffff',
     color: 'black',
@@ -1149,6 +1150,15 @@ function applyResponsiveStyles() {
         Object.assign(imageArena.style, {
             width: '100%',
             height: '60vh',
+        });
+        Object.assign(contactUs.style, {
+            background: "url('gambar/ejen alicia pilar neuro.jpeg') no-repeat center/cover",
+            backgroundBlendMode: 'multiply',
+            backgroundColor: 'rgba(0, 0, 0, 0.4)',
+        });
+        Object.assign(formContact.style, {
+            position: 'relative',
+            top: '15%',
         });
         inputUser.style.width = '300px';
         inputEmail.style.width = '300px';
@@ -1271,3 +1281,37 @@ navItemBaru8.addEventListener('click', () => {
 // rubah image ejen Alicia
 const ejenAliciaNeuro = document.querySelector('#ejen .profil:first-child img');
 ejenAliciaNeuro.src = 'gambar/ejen alicia pilar neuro.jpeg';
+
+
+// aktifkan whatsapp
+const send = document.getElementById('send');
+send.addEventListener('click', (e) => {
+    e.preventDefault();
+    // ambil value
+    const name = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const checked = document.querySelectorAll('input[type="radio"]');
+    const neuroCheck = checked[0].checked;
+    const teknoCheck = checked[1].checked;
+    const invisoCheck = checked[2].checked;
+    const kombatCheck = checked[3].checked;
+    const belumPunyaPilar = checked[4].checked;
+    const question = document.getElementById('question').value;
+    // pesan
+    const messageParts = [
+        `Nama: ${name}`,
+        `Email: ${email}`,
+        `Neuro: ${neuroCheck ? 'Yes' : 'No'}`,
+        `Tekno: ${teknoCheck ? 'Yes' : 'No'}`,
+        `Inviso: ${invisoCheck ? 'Yes' : 'No'}`,
+        `Kombat: ${kombatCheck ? 'Yes' : 'No'}`,
+        `Belum Punya Pilar: ${belumPunyaPilar ? 'Yes' : 'No'}`,
+        `Question: ${question}`
+    ];
+    const pesan = encodeURIComponent(messageParts.join('\n'));
+    // nomor
+    const nmor = "082264244554";
+    // buat link
+    const url = `https://api.whatsapp.com/send?phone=${nmor}&text=${pesan}`;
+    window.open(url);
+});
