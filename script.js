@@ -1717,7 +1717,7 @@ navItemBaru7.setAttribute('class', 'nav-item');
 // buat a baru
 const aBaru7 = document.createElement('a');
 // buat teks
-const textBaru7 = document.createTextNode('Arena');
+const textBaru7 = document.createTextNode('Base');
 // masukkan teks
 aBaru7.appendChild(textBaru7);
 // masukkan tag a ke parent
@@ -1727,8 +1727,8 @@ aBaru7.setAttribute('class', 'nav-link');
 navItemBaru7.style.cursor = 'pointer';
 // fungsi untuk scroll ke pilar
 navItemBaru7.addEventListener('click', () => {
-    const arena = document.getElementById('arena');
-    arena.scrollIntoView({ behavior: 'smooth' });
+    const place = document.getElementById('place');
+    place.scrollIntoView({ behavior: 'smooth' });
 });
 
 
