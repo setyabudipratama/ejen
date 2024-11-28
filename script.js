@@ -712,14 +712,14 @@ button.addEventListener('mouseleave', function () {
 
 
 // DOM
-// tambah halaman gallery
+// tambah halaman base M.A.T.A.
 // sibling setelahnya
 const footer = document.querySelector('footer');
 const arena = document.createElement('section');
 // masukkan element baru
 footer.before(arena);
 // tambah attribute
-arena.setAttribute('id', 'arena');
+arena.setAttribute('id', 'place');
 Object.assign(arena.style, {
     width: '100%',
     height: '100vh',
@@ -746,7 +746,7 @@ Object.assign(containerArena.style, {
 // tag h1
 const h1Arena = document.createElement('h1')
 containerArena.appendChild(h1Arena);
-const textH1Arena = document.createTextNode('M.A.T.A. Arena');
+const textH1Arena = document.createTextNode('Base M.A.T.A.');
 h1Arena.appendChild(textH1Arena);
 Object.assign(h1Arena.style, {
     color: '#ffffff',
@@ -765,52 +765,508 @@ Object.assign(contentArena.style, {
     width: '100%',
     height: '100%',
     display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    position: 'relative',
+    overflowX: 'auto',
+    columnGap: '30px'
+});
+
+// class card
+const cardArena = document.createElement('div');
+contentArena.appendChild(cardArena);
+cardArena.setAttribute('class', 'card');
+Object.assign(cardArena.style, {
+    width: '230px',
+    height: '230px',
+    display: 'flex',
+    flex: '0 0 auto',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     position: 'relative',
-    top: '5%',
+    backgroundColor: 'transparent',
+    marginLeft: '20px'
 });
 
 // tag img
 const imageArena = document.createElement('img');
-contentArena.appendChild(imageArena);
-imageArena.setAttribute('src', 'gambar/MATA ARENA.jpg');
+cardArena.appendChild(imageArena);
+imageArena.setAttribute('src', 'gambar/Savehouse M.A.T.A..jpg');
+imageArena.setAttribute('alt', 'Savehouse M.A.T.A.');
 Object.assign(imageArena.style, {
-   width: '80%',
-   height: '80%',
-   objectFit: 'cover',
-   borderRadius: '10px',
-   transition: 'all 0.5s ease'
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    borderRadius: '10px',
+    zIndex: '1',
+    transition: 'all 0.5s ease',
+    boxShadow: '5px 5px 10px black',
+    // transform: 'translate(-20px, -20px)'
+});
+
+cardArena.addEventListener('mouseenter', function () {
+    imageArena.style.transform = 'translate(-20px, -20px)';
+    imageArena.style.boxShadow = 'none';
+});
+
+cardArena.addEventListener('mouseleave', function () {
+    imageArena.style.transform = '';
+    imageArena.style.boxShadow = '5px 5px 10px black';
+});
+
+// class card-body
+const cardBodyArena = document.createElement('div');
+cardArena.appendChild(cardBodyArena);
+cardBodyArena.setAttribute('class', 'card-body');
+Object.assign(cardBodyArena.style, {
+    backgroundColor: 'blue',
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    zIndex: '0',
+    borderRadius: '10px',
+    transition: 'all 0.5s ease',
+    // transform: 'translate(20px, 20px)'
+});
+
+cardArena.addEventListener('mouseenter', function () {
+    cardBodyArena.style.transform = 'translate(20px, 20px)';
+});
+
+cardArena.addEventListener('mouseleave', function () {
+    cardBodyArena.style.transform = '';
 });
 
 // tag h2
 const h2Arena = document.createElement('h2');
-contentArena.appendChild(h2Arena);
-const h2TextArena = document.createTextNode('Musim 3: Episode 11');
+cardBodyArena.appendChild(h2Arena);
+const h2TextArena = document.createTextNode('Savehouse M.A.T.A.');
 h2Arena.appendChild(h2TextArena);
 Object.assign(h2Arena.style, {
     color: '#ffffff',
-    fontSize: '1.4rem',
+    fontSize: '1.2rem',
     fontFamily: 'sans-serif',
     position: 'relative',
-    top: '-70px',
-    zIndex: '100',
+    top: '68%',
     cursor: 'default',
+    transition: 'all 0.5s ease',
+    transform: 'translateY(-50px)',
     opacity: '0',
-    transform: 'translateY(50px)',
-    transition: 'all 0.5s ease'
 });
 
-imageArena.addEventListener('mouseenter', function () {
-    h2Arena.style.opacity = '1';
+cardArena.addEventListener('mouseenter', function () {
     h2Arena.style.transform = 'translateY(0)';
-    imageArena.style.filter = 'brightness(0.5)';
+    h2Arena.style.opacity = '1';
 });
-imageArena.addEventListener('mouseleave', function () {
+
+cardArena.addEventListener('mouseleave', function () {
+    h2Arena.style.transform = 'translateY(-50px)';
     h2Arena.style.opacity = '0';
-    h2Arena.style.transform = 'translateY(50px)';
-    imageArena.style.filter = '';
+});
+
+// tag p
+const pArena = document.createElement('p');
+cardBodyArena.appendChild(pArena);
+const pTextArena = document.createTextNode('Musim 1');
+pArena.appendChild(pTextArena);
+Object.assign(pArena.style, {
+    color: '#ffffff',
+    fontSize: '1rem',
+    fontFamily: 'sans-serif',
+    writingMode: 'vertical-lr',
+    position: 'relative',
+    left: '47%',
+    cursor: 'default',
+    transition: 'all 0.5s ease',
+    transform: 'translateX(-50px)',
+    opacity: '0',
+});
+
+cardArena.addEventListener('mouseenter', function () {
+    pArena.style.transform = 'translateX(0)';
+    pArena.style.opacity = '1';
+});
+
+cardArena.addEventListener('mouseleave', function () {
+    pArena.style.transform = 'translateX(-50px)';
+    pArena.style.opacity = '0';
+});
+
+// class card2
+const cardArena2 = document.createElement('div');
+contentArena.appendChild(cardArena2);
+cardArena2.setAttribute('class', 'card');
+Object.assign(cardArena2.style, {
+    width: '230px',
+    height: '230px',
+    display: 'flex',
+    flex: '0 0 auto',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
+    backgroundColor: 'transparent',
+});
+
+// tag img
+const imageArena2 = document.createElement('img');
+cardArena2.appendChild(imageArena2);
+imageArena2.setAttribute('src', 'gambar/Akademi M.A.T.A..jpg');
+imageArena2.setAttribute('alt', 'Akademi M.A.T.A.');
+Object.assign(imageArena2.style, {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    borderRadius: '10px',
+    zIndex: '1',
+    transition: 'all 0.5s ease',
+    boxShadow: '5px 5px 10px black'
+    // transform: 'translate(-20px, -20px)'
+});
+
+cardArena2.addEventListener('mouseenter', function () {
+    imageArena2.style.transform = 'translate(-20px, -20px)';
+    imageArena2.style.boxShadow = 'none';
+});
+
+cardArena2.addEventListener('mouseleave', function () {
+    imageArena2.style.transform = '';
+    imageArena2.style.boxShadow = '5px 5px 10px black';
+});
+
+// class card-body
+const cardBodyArena2 = document.createElement('div');
+cardArena2.appendChild(cardBodyArena2);
+cardBodyArena2.setAttribute('class', 'card-body');
+Object.assign(cardBodyArena2.style, {
+    backgroundColor: 'lightblue',
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    zIndex: '0',
+    borderRadius: '10px',
+    transition: 'all 0.5s ease',
+    // transform: 'translate(20px, 20px)'
+});
+
+cardArena2.addEventListener('mouseenter', function () {
+    cardBodyArena2.style.transform = 'translate(20px, 20px)';
+});
+
+cardArena2.addEventListener('mouseleave', function () {
+    cardBodyArena2.style.transform = '';
+});
+
+// tag h2
+const h2Arena2 = document.createElement('h2');
+cardBodyArena2.appendChild(h2Arena2);
+const h2TextArena2 = document.createTextNode('Akademi M.A.T.A.');
+h2Arena2.appendChild(h2TextArena2);
+Object.assign(h2Arena2.style, {
+    color: '#000000',
+    fontSize: '1.2rem',
+    fontFamily: 'sans-serif',
+    position: 'relative',
+    top: '68%',
+    cursor: 'default',
+    transition: 'all 0.5s ease',
+    transform: 'translateY(-50px)',
+    opacity: '0',
+});
+
+cardArena2.addEventListener('mouseenter', function () {
+    h2Arena2.style.transform = 'translateY(0)';
+    h2Arena2.style.opacity = '1';
+});
+
+cardArena2.addEventListener('mouseleave', function () {
+    h2Arena2.style.transform = 'translateY(-50px)';
+    h2Arena2.style.opacity = '0';
+});
+
+// tag p
+const pArena2 = document.createElement('p');
+cardBodyArena2.appendChild(pArena2);
+const pTextArena2 = document.createTextNode('Musim 2');
+pArena2.appendChild(pTextArena2);
+Object.assign(pArena2.style, {
+    color: '#000000',
+    fontSize: '1rem',
+    fontFamily: 'sans-serif',
+    writingMode: 'vertical-lr',
+    position: 'relative',
+    left: '47%',
+    cursor: 'default',
+    transition: 'all 0.5s ease',
+    transform: 'translateX(-50px)',
+    opacity: '0',
+});
+
+cardArena2.addEventListener('mouseenter', function () {
+    pArena2.style.transform = 'translateX(0)';
+    pArena2.style.opacity = '1';
+});
+
+cardArena2.addEventListener('mouseleave', function () {
+    pArena2.style.transform = 'translateX(-50px)';
+    pArena2.style.opacity = '0';
+});
+
+// class card3
+const cardArena3 = document.createElement('div');
+contentArena.appendChild(cardArena3);
+cardArena3.setAttribute('class', 'card');
+Object.assign(cardArena3.style, {
+    width: '230px',
+    height: '230px',
+    display: 'flex',
+    flex: '0 0 auto',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
+    backgroundColor: 'transparent',
+});
+
+// tag img
+const imageArena3 = document.createElement('img');
+cardArena3.appendChild(imageArena3);
+imageArena3.setAttribute('src', 'gambar/Markas Besar M.A.T.A..jpg');
+imageArena3.setAttribute('alt', 'Markas Besar M.A.T.A.');
+Object.assign(imageArena3.style, {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    borderRadius: '10px',
+    zIndex: '1',
+    transition: 'all 0.5s ease',
+    boxShadow: '5px 5px 10px black'
+    // transform: 'translate(-20px, -20px)'
+});
+
+cardArena3.addEventListener('mouseenter', function () {
+    imageArena3.style.transform = 'translate(-20px, -20px)';
+    imageArena3.style.boxShadow = 'none';
+});
+
+cardArena3.addEventListener('mouseleave', function () {
+    imageArena3.style.transform = '';
+    imageArena3.style.boxShadow = '5px 5px 10px black';
+});
+
+// class card-body
+const cardBodyArena3 = document.createElement('div');
+cardArena3.appendChild(cardBodyArena3);
+cardBodyArena3.setAttribute('class', 'card-body');
+Object.assign(cardBodyArena3.style, {
+    backgroundColor: 'yellow',
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    zIndex: '0',
+    borderRadius: '10px',
+    transition: 'all 0.5s ease',
+    // transform: 'translate(20px, 20px)'
+});
+
+cardArena3.addEventListener('mouseenter', function () {
+    cardBodyArena3.style.transform = 'translate(20px, 20px)';
+});
+
+cardArena3.addEventListener('mouseleave', function () {
+    cardBodyArena3.style.transform = '';
+});
+
+// tag h2
+const h2Arena3 = document.createElement('h2');
+cardBodyArena3.appendChild(h2Arena3);
+const h2TextArena3 = document.createTextNode('Markas Besar M.A.T.A.');
+h2Arena3.appendChild(h2TextArena3);
+Object.assign(h2Arena3.style, {
+    color: '#000000',
+    fontSize: '1.2rem',
+    fontFamily: 'sans-serif',
+    position: 'relative',
+    top: '87%',
+    cursor: 'default',
+    transition: 'all 0.5s ease',
+    transform: 'translateY(-50px)',
+    opacity: '0',
+});
+
+cardArena3.addEventListener('mouseenter', function () {
+    h2Arena3.style.transform = 'translateY(0)';
+    h2Arena3.style.opacity = '1';
+});
+
+cardArena3.addEventListener('mouseleave', function () {
+    h2Arena3.style.transform = 'translateY(-50px)';
+    h2Arena3.style.opacity = '0';
+});
+
+// tag p
+const pArena3 = document.createElement('p');
+cardBodyArena3.appendChild(pArena3);
+const pTextArena3 = document.createTextNode('The Movie, Misi: Neo');
+pArena3.appendChild(pTextArena3);
+Object.assign(pArena3.style, {
+    color: '#000000',
+    fontSize: '0.9rem',
+    fontFamily: 'sans-serif',
+    writingMode: 'vertical-lr',
+    position: 'relative',
+    left: '47%',
+    cursor: 'default',
+    transition: 'all 0.5s ease',
+    transform: 'translateX(-50px)',
+    opacity: '0',
+});
+
+cardArena3.addEventListener('mouseenter', function () {
+    pArena3.style.transform = 'translateX(0)';
+    pArena3.style.opacity = '1';
+});
+
+cardArena3.addEventListener('mouseleave', function () {
+    pArena3.style.transform = 'translateX(-50px)';
+    pArena3.style.opacity = '0';
+});
+
+// class card4
+const cardArena4 = document.createElement('div');
+contentArena.appendChild(cardArena4);
+cardArena4.setAttribute('class', 'card');
+Object.assign(cardArena4.style, {
+    width: '230px',
+    height: '230px',
+    display: 'flex',
+    flex: '0 0 auto',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
+    backgroundColor: 'transparent',
+});
+
+// tag img
+const imageArena4 = document.createElement('img');
+cardArena4.appendChild(imageArena4);
+imageArena4.setAttribute('src', 'gambar/M.A.T.A. Arena.jpg');
+imageArena4.setAttribute('alt', 'M.A.T.A. Arena');
+Object.assign(imageArena4.style, {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    borderRadius: '10px',
+    zIndex: '1',
+    transition: 'all 0.5s ease',
+    boxShadow: '5px 5px 10px black'
+    // transform: 'translate(-20px, -20px)'
+});
+
+cardArena4.addEventListener('mouseenter', function () {
+    imageArena4.style.transform = 'translate(-20px, -20px)';
+    imageArena4.style.boxShadow = 'none';
+});
+
+cardArena4.addEventListener('mouseleave', function () {
+    imageArena4.style.transform = '';
+    imageArena4.style.boxShadow = '5px 5px 10px black';
+});
+
+// class card-body
+const cardBodyArena4 = document.createElement('div');
+cardArena4.appendChild(cardBodyArena4);
+cardBodyArena4.setAttribute('class', 'card-body');
+Object.assign(cardBodyArena4.style, {
+    backgroundColor: 'lightgrey',
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    zIndex: '0',
+    borderRadius: '10px',
+    transition: 'all 0.5s ease',
+    // transform: 'translate(20px, 20px)'
+});
+
+cardArena4.addEventListener('mouseenter', function () {
+    cardBodyArena4.style.transform = 'translate(20px, 20px)';
+});
+
+cardArena4.addEventListener('mouseleave', function () {
+    cardBodyArena4.style.transform = '';
+});
+
+// tag h2
+const h2Arena4 = document.createElement('h2');
+cardBodyArena4.appendChild(h2Arena4);
+const h2TextArena4 = document.createTextNode('M.A.T.A. Arena');
+h2Arena4.appendChild(h2TextArena4);
+Object.assign(h2Arena4.style, {
+    color: '#000000',
+    fontSize: '1.2rem',
+    fontFamily: 'sans-serif',
+    position: 'relative',
+    top: '68%',
+    cursor: 'default',
+    transition: 'all 0.5s ease',
+    transform: 'translateY(-50px)',
+    opacity: '0',
+});
+
+cardArena4.addEventListener('mouseenter', function () {
+    h2Arena4.style.transform = 'translateY(0)';
+    h2Arena4.style.opacity = '1';
+});
+
+cardArena4.addEventListener('mouseleave', function () {
+    h2Arena4.style.transform = 'translateY(-50px)';
+    h2Arena4.style.opacity = '0';
+});
+
+// tag p
+const pArena4 = document.createElement('p');
+cardBodyArena4.appendChild(pArena4);
+const pTextArena4 = document.createTextNode('Musim 3');
+pArena4.appendChild(pTextArena4);
+Object.assign(pArena4.style, {
+    color: '#000000',
+    fontSize: '1rem',
+    fontFamily: 'sans-serif',
+    writingMode: 'vertical-lr',
+    position: 'relative',
+    left: '47%',
+    cursor: 'default',
+    transition: 'all 0.5s ease',
+    transform: 'translateX(-50px)',
+    opacity: '0',
+});
+
+cardArena4.addEventListener('mouseenter', function () {
+    pArena4.style.transform = 'translateX(0)';
+    pArena4.style.opacity = '1';
+});
+
+cardArena4.addEventListener('mouseleave', function () {
+    pArena4.style.transform = 'translateX(-50px)';
+    pArena4.style.opacity = '0';
 });
 
 
@@ -1147,10 +1603,33 @@ function applyResponsiveStyles() {
         Object.assign(contentArena.style, {
             width: '100%',
         });
-        Object.assign(imageArena.style, {
-            width: '100%',
-            height: '60vh',
+        Object.assign(cardArena.style, {
+            width: '200px',
+            height: '200px',
         });
+        Object.assign(cardArena2.style, {
+            width: '200px',
+            height: '200px',
+        });
+        Object.assign(cardArena3.style, {
+            width: '200px',
+            height: '200px',
+        });
+        Object.assign(cardArena4.style, {
+            width: '200px',
+            height: '200px',
+        });
+        h2Arena.style.fontSize = '1rem';
+        h2Arena2.style.fontSize = '1rem';
+        Object.assign(h2Arena3.style, {
+            fontSize: '1rem',
+            top: '92%',
+        });
+        h2Arena4.style.fontSize = '1rem';
+        pArena.style.fontSize = '0.8rem';
+        pArena2.style.fontSize = '0.8rem';
+        pArena3.style.fontSize = '0.8rem';
+        pArena4.style.fontSize = '0.8rem';
         Object.assign(contactUs.style, {
             background: "url('gambar/ejen alicia pilar neuro.jpeg') no-repeat center/cover",
             backgroundBlendMode: 'multiply',
