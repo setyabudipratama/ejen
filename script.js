@@ -873,7 +873,7 @@ cardArena.addEventListener('mouseleave', function () {
 // tag p
 const pArena = document.createElement('p');
 cardBodyArena.appendChild(pArena);
-const pTextArena = document.createTextNode('Musim 1');
+const pTextArena = document.createTextNode('Season 1');
 pArena.appendChild(pTextArena);
 Object.assign(pArena.style, {
     color: '#ffffff',
@@ -998,7 +998,7 @@ cardArena2.addEventListener('mouseleave', function () {
 // tag p
 const pArena2 = document.createElement('p');
 cardBodyArena2.appendChild(pArena2);
-const pTextArena2 = document.createTextNode('Musim 2');
+const pTextArena2 = document.createTextNode('Season 2');
 pArena2.appendChild(pTextArena2);
 Object.assign(pArena2.style, {
     color: '#000000',
@@ -1248,7 +1248,7 @@ cardArena4.addEventListener('mouseleave', function () {
 // tag p
 const pArena4 = document.createElement('p');
 cardBodyArena4.appendChild(pArena4);
-const pTextArena4 = document.createTextNode('Musim 3');
+const pTextArena4 = document.createTextNode('Season 3');
 pArena4.appendChild(pTextArena4);
 Object.assign(pArena4.style, {
     color: '#000000',
