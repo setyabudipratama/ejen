@@ -1601,6 +1601,7 @@ function applyResponsiveStyles() {
            top: '34%',
            left: '50%',
         });
+        arena.style.height = '65vh';
         Object.assign(h1Arena.style, {
             fontSize: '1.5rem',
         });
