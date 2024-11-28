@@ -786,7 +786,8 @@ Object.assign(cardArena.style, {
     alignItems: 'center',
     position: 'relative',
     backgroundColor: 'transparent',
-    marginLeft: '20px'
+    marginLeft: '20px',
+    border: 'none'
 });
 
 // tag img
@@ -911,6 +912,7 @@ Object.assign(cardArena2.style, {
     alignItems: 'center',
     position: 'relative',
     backgroundColor: 'transparent',
+    border: 'none'
 });
 
 // tag img
@@ -1035,6 +1037,7 @@ Object.assign(cardArena3.style, {
     alignItems: 'center',
     position: 'relative',
     backgroundColor: 'transparent',
+    border: 'none'
 });
 
 // tag img
@@ -1159,6 +1162,7 @@ Object.assign(cardArena4.style, {
     alignItems: 'center',
     position: 'relative',
     backgroundColor: 'transparent',
+    border: 'none'
 });
 
 // tag img
