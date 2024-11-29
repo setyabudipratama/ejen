@@ -1599,7 +1599,7 @@ function applyResponsiveStyles() {
         });
         Object.assign(button.style, {
            position: 'absolute',
-           top: '34%',
+           top: '80%',
            left: '50%',
         });
         arena.style.height = '65vh';
