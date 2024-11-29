@@ -364,7 +364,8 @@ Object.assign(irisStyles.style, {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    position: 'relative'
 });
 
 // class container
@@ -490,8 +491,8 @@ Object.assign(prevBtn.style, {
     fontSize: '1.5rem',
     cursor: 'pointer',
     position: 'absolute',
-    top: '25.2%',
-    left: '8.5%',
+    top: '50%',
+    left: '9%',
     borderRadius: '50%',
     width: '35px',
     height: '35px',
@@ -505,8 +506,8 @@ Object.assign(nextBtn.style, {
     fontSize: '1.5rem',
     cursor: 'pointer',
     position: 'absolute',
-    top: '25.2%',
-    left: '36%',
+    top: '50%',
+    left: '35%',
     borderRadius: '50%',
     width: '35px',
     height: '35px',
@@ -1650,25 +1651,6 @@ function applyResponsiveStyles() {
         textArea.style.width = '300px';
         buttonContact.style.left = '35%';
     } else if (window.innerWidth >= 767 && window.innerWidth < 1024) {
-        Object.assign(prevBtn.style, {
-            position: 'absolute',
-            top: '38.2%',
-            left: '9%',
-        });
-        Object.assign(nextBtn.style, {
-            position: 'absolute',
-            top: '38.2%',
-            left: '35%',
-        });
-        Object.assign(button.style, {
-            position: 'absolute',
-            top: '41%',
-            left: '70%',
-        });
-        Object.assign(imageArena.style, {
-            width: '95%',
-            height: '60vh',
-        });
         inputUser.style.width = '500px';
         inputEmail.style.width = '500px';
         opsiPilar.style.width = '500px';
