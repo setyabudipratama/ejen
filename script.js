@@ -345,6 +345,396 @@ Object.assign(containerHeader.style, {
 
 
 // DOM
+// ganti efek card
+const aliciaNeuro = document.querySelector('#ejen .profil:first-child');
+Object.assign(aliciaNeuro.style, {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '200px',
+});
+const imageAliciaNeuro = document.querySelector('#ejen .profil:first-child img');
+imageAliciaNeuro.src = 'gambar/ejen alicia pilar neuro.jpeg';
+const cardBodyAlicia = document.querySelector('#ejen .profil:first-child .card-body');
+Object.assign(cardBodyAlicia.style, {
+    height: '93%',
+    transform: 'translateY(0)',
+    transition: 'all 0.5s ease',
+    borderRadius: '10px'
+});
+const h2AliciaNeuro = document.querySelector('#ejen .profil:first-child .card-body h2');
+Object.assign(h2AliciaNeuro.style, {
+    top: '25%',
+    transition: 'all 0.5s ease',
+    transform: 'translateY(-50%)',
+    opacity: '0'
+});
+const spanAliciaNeuro = document.querySelector('#ejen .profil:first-child .card-body span');
+Object.assign(spanAliciaNeuro.style, {
+    top: '25%',
+    transition: 'all 0.5s ease',
+    transform: 'translateY(-50%)',
+    opacity: '0'
+});
+const span2AliciaNeuro = document.querySelector('#ejen .profil:first-child .card-body span:nth-child(3)');
+Object.assign(span2AliciaNeuro.style, {
+    top: '24%',
+    transition: 'all 0.5s ease',
+    transform: 'translateY(-50%)',
+    opacity: '0'
+});
+aliciaNeuro.addEventListener('mouseenter', function () {
+    Object.assign(imageAliciaNeuro.style, {
+        width: '190px',
+        height: '190px',
+        borderRadius: '50%',
+    });
+    Object.assign(cardBodyAlicia.style, {
+        height: '180px',
+        borderRadius: '100px 100px 10px 10px',
+    });
+    Object.assign(h2AliciaNeuro.style, {
+        transform: 'translateY(0)',
+        opacity: '1',
+    });
+    Object.assign(spanAliciaNeuro.style, {
+        transform: 'translateY(0)',
+        opacity: '1',
+    });
+    Object.assign(span2AliciaNeuro.style, {
+        transform: 'translateY(0)',
+        opacity: '1',
+    });
+});
+aliciaNeuro.addEventListener('mouseleave', function () {
+    Object.assign(imageAliciaNeuro.style, {
+        width: '',
+        height: '',
+        borderRadius: '',
+    });
+    Object.assign(cardBodyAlicia.style, {
+        height: '93%',
+        borderRadius: '10px',
+    });
+    Object.assign(h2AliciaNeuro.style, {
+        transform: 'translateY(-50%)',
+        opacity: '0',
+    });
+    Object.assign(spanAliciaNeuro.style, {
+        transform: 'translateY(-50%)',
+        opacity: '0',
+    });
+    Object.assign(span2AliciaNeuro.style, {
+        transform: 'translateY(-50%)',
+        opacity: '0',
+    });
+});
+
+
+const aliTekno = document.querySelector('#ejen .profil:nth-child(2)');
+Object.assign(aliTekno.style, {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '200px',
+});
+const imageAliTekno = document.querySelector('#ejen .profil:nth-child(2) img');
+const cardBodyAli = document.querySelector('#ejen .profil:nth-child(2) .card-body');
+Object.assign(cardBodyAli.style, {
+    height: '93%',
+    transform: 'translateY(0)',
+    transition: 'all 0.5s ease',
+    borderRadius: '10px'
+});
+const h2AliTekno = document.querySelector('#ejen .profil:nth-child(2) .card-body h2');
+Object.assign(h2AliTekno.style, {
+    top: '25%',
+    transition: 'all 0.5s ease',
+    transform: 'translateY(-50%)',
+    opacity: '0'
+});
+const spanAliTekno = document.querySelector('#ejen .profil:nth-child(2) .card-body span');
+Object.assign(spanAliTekno.style, {
+    top: '25%',
+    transition: 'all 0.5s ease',
+    transform: 'translateY(-50%)',
+    opacity: '0'
+});
+const span2AliTekno = document.querySelector('#ejen .profil:nth-child(2) .card-body span:nth-child(3)');
+Object.assign(span2AliTekno.style, {
+    top: '24%',
+    transition: 'all 0.5s ease',
+    transform: 'translateY(-50%)',
+    opacity: '0'
+});
+aliTekno.addEventListener('mouseenter', function () {
+    Object.assign(imageAliTekno.style, {
+        width: '190px',
+        height: '190px',
+        borderRadius: '50%',
+    });
+    Object.assign(cardBodyAli.style, {
+        height: '180px',
+        borderRadius: '100px 100px 10px 10px',
+    });
+    Object.assign(h2AliTekno.style, {
+        transform: 'translateY(0)',
+        opacity: '1',
+    });
+    Object.assign(spanAliTekno.style, {
+        transform: 'translateY(0)',
+        opacity: '1',
+    });
+    Object.assign(span2AliTekno.style, {
+        transform: 'translateY(0)',
+        opacity: '1',
+    });
+});
+aliTekno.addEventListener('mouseleave', function () {
+    Object.assign(imageAliTekno.style, {
+        width: '',
+        height: '',
+        borderRadius: '',
+    });
+    Object.assign(cardBodyAli.style, {
+        height: '93%',
+        borderRadius: '10px',
+    });
+    Object.assign(h2AliTekno.style, {
+        transform: 'translateY(-50%)',
+        opacity: '0',
+    });
+    Object.assign(spanAliTekno.style, {
+        transform: 'translateY(-50%)',
+        opacity: '0',
+    });
+    Object.assign(span2AliTekno.style, {
+        transform: 'translateY(-50%)',
+        opacity: '0',
+    });
+});
+
+
+const kimTekno = document.querySelector('#ejen .profil:nth-child(3)');
+Object.assign(kimTekno.style, {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '200px',
+});
+const imageKimTekno = document.querySelector('#ejen .profil:nth-child(3) img');
+const cardBodyKim = document.querySelector('#ejen .profil:nth-child(3) .card-body');
+Object.assign(cardBodyKim.style, {
+    height: '93%',
+    transform: 'translateY(0)',
+    transition: 'all 0.5s ease',
+    borderRadius: '10px'
+});
+const h2KimTekno = document.querySelector('#ejen .profil:nth-child(3) .card-body h2');
+Object.assign(h2KimTekno.style, {
+    top: '25%',
+    transition: 'all 0.5s ease',
+    transform: 'translateY(-50%)',
+    opacity: '0'
+});
+const spanKimTekno = document.querySelector('#ejen .profil:nth-child(3) .card-body span');
+Object.assign(spanKimTekno.style, {
+    top: '25%',
+    transition: 'all 0.5s ease',
+    transform: 'translateY(-50%)',
+    opacity: '0'
+});
+const span2KimTekno = document.querySelector('#ejen .profil:nth-child(3) .card-body span:nth-child(3)');
+Object.assign(span2KimTekno.style, {
+    top: '24%',
+    transition: 'all 0.5s ease',
+    transform: 'translateY(-50%)',
+    opacity: '0'
+});
+kimTekno.addEventListener('mouseenter', function () {
+    Object.assign(imageKimTekno.style, {
+        width: '190px',
+        height: '190px',
+        borderRadius: '50%',
+    });
+    Object.assign(cardBodyKim.style, {
+        height: '180px',
+        borderRadius: '100px 100px 10px 10px',
+    });
+    Object.assign(h2KimTekno.style, {
+        transform: 'translateY(0)',
+        opacity: '1',
+    });
+    Object.assign(spanKimTekno.style, {
+        transform: 'translateY(0)',
+        opacity: '1',
+    });
+    Object.assign(span2KimTekno.style, {
+        transform: 'translateY(0)',
+        opacity: '1',
+    });
+});
+kimTekno.addEventListener('mouseleave', function () {
+    Object.assign(imageKimTekno.style, {
+        width: '',
+        height: '',
+        borderRadius: '',
+    });
+    Object.assign(cardBodyKim.style, {
+        height: '93%',
+        borderRadius: '10px',
+    });
+    Object.assign(h2KimTekno.style, {
+        transform: 'translateY(-50%)',
+        opacity: '0',
+    });
+    Object.assign(spanKimTekno.style, {
+        transform: 'translateY(-50%)',
+        opacity: '0',
+    });
+    Object.assign(span2KimTekno.style, {
+        transform: 'translateY(-50%)',
+        opacity: '0',
+    });
+});
+kimTekno.addEventListener('mouseenter', function () {
+    Object.assign(imageKimTekno.style, {
+        width: '190px',
+        height: '190px',
+        borderRadius: '50%',
+    });
+    Object.assign(cardBodyKim.style, {
+        height: '180px',
+        borderRadius: '100px 100px 10px 10px',
+    });
+    Object.assign(h2KimTekno.style, {
+        transform: 'translateY(0)',
+        opacity: '1',
+    });
+    Object.assign(spanKimTekno.style, {
+        transform: 'translateY(0)',
+        opacity: '1',
+    });
+    Object.assign(span2KimTekno.style, {
+        transform: 'translateY(0)',
+        opacity: '1',
+    });
+});
+kimTekno.addEventListener('mouseleave', function () {
+    Object.assign(imageKimTekno.style, {
+        width: '',
+        height: '',
+        borderRadius: '',
+    });
+    Object.assign(cardBodyKim.style, {
+        height: '93%',
+        borderRadius: '10px',
+    });
+    Object.assign(h2KimTekno.style, {
+        transform: 'translateY(-50%)',
+        opacity: '0',
+    });
+    Object.assign(spanKimTekno.style, {
+        transform: 'translateY(-50%)',
+        opacity: '0',
+    });
+    Object.assign(span2KimTekno.style, {
+        transform: 'translateY(-50%)',
+        opacity: '0',
+    });
+});
+
+
+const samNeuro = document.querySelector('#ejen .profil:nth-child(4)');
+Object.assign(samNeuro.style, {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '200px',
+});
+const imageSamNeuro = document.querySelector('#ejen .profil:nth-child(4) img');
+const cardBodySam = document.querySelector('#ejen .profil:nth-child(4) .card-body');
+Object.assign(cardBodySam.style, {
+    height: '93%',
+    transform: 'translateY(0)',
+    transition: 'all 0.5s ease',
+    borderRadius: '10px'
+});
+const h2SamNeuro = document.querySelector('#ejen .profil:nth-child(4) .card-body h2');
+Object.assign(h2SamNeuro.style, {
+    top: '25%',
+    transition: 'all 0.5s ease',
+    transform: 'translateY(-50%)',
+    opacity: '0'
+});
+const spanSamNeuro = document.querySelector('#ejen .profil:nth-child(4) .card-body span');
+Object.assign(spanSamNeuro.style, {
+    top: '25%',
+    transition: 'all 0.5s ease',
+    transform: 'translateY(-50%)',
+    opacity: '0'
+});
+const span2SamNeuro = document.querySelector('#ejen .profil:nth-child(4) .card-body span:nth-child(3)');
+Object.assign(span2SamNeuro.style, {
+    top: '24%',
+    transition: 'all 0.5s ease',
+    transform: 'translateY(-50%)',
+    opacity: '0'
+});
+samNeuro.addEventListener('mouseenter', function () {
+    Object.assign(imageSamNeuro.style, {
+        width: '190px',
+        height: '190px',
+        borderRadius: '50%',
+    });
+    Object.assign(cardBodySam.style, {
+        height: '180px',
+        borderRadius: '100px 100px 10px 10px',
+    });
+    Object.assign(h2SamNeuro.style, {
+        transform: 'translateY(0)',
+        opacity: '1',
+    });
+    Object.assign(spanSamNeuro.style, {
+        transform: 'translateY(0)',
+        opacity: '1',
+    });
+    Object.assign(span2SamNeuro.style, {
+        transform: 'translateY(0)',
+        opacity: '1',
+    });
+});
+samNeuro.addEventListener('mouseleave', function () {
+    Object.assign(imageSamNeuro.style, {
+        width: '',
+        height: '',
+        borderRadius: '',
+    });
+    Object.assign(cardBodySam.style, {
+        height: '93%',
+        borderRadius: '10px',
+    });
+    Object.assign(h2SamNeuro.style, {
+        transform: 'translateY(-50%)',
+        opacity: '0',
+    });
+    Object.assign(spanSamNeuro.style, {
+        transform: 'translateY(-50%)',
+        opacity: '0',
+    });
+    Object.assign(span2SamNeuro.style, {
+        transform: 'translateY(-50%)',
+        opacity: '0',
+    });
+});
+
+
+// DOM
+// tukar posisi top ejen
+kimTekno.after(aliTekno);
+
+
+// DOM
 // tambah halaman project iris
 // ambil parent
 const body = document.querySelector('body');
@@ -1602,6 +1992,142 @@ function applyResponsiveStyles() {
            top: '80%',
            left: '50%',
         });
+        Object.assign(aliciaNeuro.style, {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            width: '150px',
+        });
+        Object.assign(cardBodyAlicia.style, {
+            height: '91%',
+            borderRadius: '10px',
+            transform: 'translateY(0)',
+        });
+        aliciaNeuro.addEventListener('mouseenter', function () {
+            Object.assign(imageAliciaNeuro.style, {
+                width: '140px',
+                height: '140px',
+                borderRadius: '50%',
+            });
+            Object.assign(cardBodyAlicia.style, {
+                height: '120px',
+                borderRadius: '100px 100px 10px 10px',
+            });
+        });
+        aliciaNeuro.addEventListener('mouseleave', function () {
+            Object.assign(imageAliciaNeuro.style, {
+                width: '',
+                height: '',
+                borderRadius: '',
+            });
+            Object.assign(cardBodyAlicia.style, {
+                height: '91%',
+                borderRadius: '10px',
+                transform: 'translateY(0)',
+            });
+        });
+        Object.assign(kimTekno.style, {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            width: '150px',
+        });
+        Object.assign(cardBodyKim.style, {
+            height: '91%',
+            borderRadius: '10px',
+            transform: 'translateY(0)',
+        });
+        kimTekno.addEventListener('mouseenter', function () {
+            Object.assign(imageKimTekno.style, {
+                width: '140px',
+                height: '140px',
+                borderRadius: '50%',
+            });
+            Object.assign(cardBodyKim.style, {
+                height: '120px',
+                borderRadius: '100px 100px 10px 10px',
+            });
+        });
+        kimTekno.addEventListener('mouseleave', function () {
+            Object.assign(imageKimTekno.style, {
+                width: '',
+                height: '',
+                borderRadius: '',
+            });
+            Object.assign(cardBodyKim.style, {
+                height: '91%',
+                borderRadius: '10px',
+                transform: 'translateY(0)',
+            });
+        });
+        Object.assign(aliTekno.style, {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            width: '150px',
+        });
+        Object.assign(cardBodyAli.style, {
+            height: '91%',
+            borderRadius: '10px',
+            transform: 'translateY(0)',
+        });
+        aliTekno.addEventListener('mouseenter', function () {
+            Object.assign(imageAliTekno.style, {
+                width: '140px',
+                height: '140px',
+                borderRadius: '50%',
+            });
+            Object.assign(cardBodyAli.style, {
+                height: '120px',
+                borderRadius: '100px 100px 10px 10px',
+            });
+        });
+        aliTekno.addEventListener('mouseleave', function () {
+            Object.assign(imageAliTekno.style, {
+                width: '',
+                height: '',
+                borderRadius: '',
+            });
+            Object.assign(cardBodyAli.style, {
+                height: '91%',
+                borderRadius: '10px',
+                transform: 'translateY(0)',
+            });
+        });
+        Object.assign(samNeuro.style, {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            width: '150px',
+        });
+        Object.assign(cardBodySam.style, {
+            height: '91%',
+            borderRadius: '10px',
+            transform: 'translateY(0)',
+        });
+        samNeuro.addEventListener('mouseenter', function () {
+            Object.assign(imageSamNeuro.style, {
+                width: '140px',
+                height: '140px',
+                borderRadius: '50%',
+            });
+            Object.assign(cardBodySam.style, {
+                height: '120px',
+                borderRadius: '100px 100px 10px 10px',
+            });
+        });
+        samNeuro.addEventListener('mouseleave', function () {
+            Object.assign(imageSamNeuro.style, {
+                width: '',
+                height: '',
+                borderRadius: '',
+            });
+            Object.assign(cardBodySam.style, {
+                height: '91%',
+                borderRadius: '10px',
+                transform: 'translateY(0)',
+            });
+        });
         arena.style.height = '65vh';
         Object.assign(h1Arena.style, {
             fontSize: '1.5rem',
@@ -1651,6 +2177,122 @@ function applyResponsiveStyles() {
         textArea.style.width = '300px';
         buttonContact.style.left = '35%';
     } else if (window.innerWidth >= 767 && window.innerWidth < 1024) {
+        Object.assign(cardBodyAlicia.style, {
+            height: '91%',
+            width: '90%',
+            borderRadius: '10px',
+            transform: 'translateY(0)',
+        });
+        aliciaNeuro.addEventListener('mouseenter', function () {
+            Object.assign(imageAliciaNeuro.style, {
+                width: '170px',
+                height: '170px',
+                borderRadius: '50%',
+            });
+            Object.assign(cardBodyAlicia.style, {
+                height: '180px',
+                borderRadius: '100px 100px 10px 10px',
+            });
+        });
+        aliciaNeuro.addEventListener('mouseleave', function () {
+            Object.assign(imageAliciaNeuro.style, {
+                width: '',
+                height: '',
+                borderRadius: '',
+            });
+            Object.assign(cardBodyAlicia.style, {
+                height: '91%',
+                borderRadius: '10px',
+                transform: 'translateY(0)',
+            });
+        });
+        Object.assign(cardBodyKim.style, {
+            height: '91%',
+            width: '90%',
+            borderRadius: '10px',
+            transform: 'translateY(0)',
+        });
+        kimTekno.addEventListener('mouseenter', function () {
+            Object.assign(imageKimTekno.style, {
+                width: '170px',
+                height: '170px',
+                borderRadius: '50%',
+            });
+            Object.assign(cardBodyKim.style, {
+                height: '180px',
+                borderRadius: '100px 100px 10px 10px',
+            });
+        });
+        kimTekno.addEventListener('mouseleave', function () {
+            Object.assign(imageKimTekno.style, {
+                width: '',
+                height: '',
+                borderRadius: '',
+            });
+            Object.assign(cardBodyKim.style, {
+                height: '91%',
+                borderRadius: '10px',
+                transform: 'translateY(0)',
+            });
+        });
+        Object.assign(cardBodyAli.style, {
+            height: '91%',
+            width: '90%',
+            borderRadius: '10px',
+            transform: 'translateY(0)',
+        });
+        aliTekno.addEventListener('mouseenter', function () {
+            Object.assign(imageAliTekno.style, {
+                width: '170px',
+                height: '170px',
+                borderRadius: '50%',
+            });
+            Object.assign(cardBodyAli.style, {
+                height: '180px',
+                borderRadius: '100px 100px 10px 10px',
+            });
+        });
+        aliTekno.addEventListener('mouseleave', function () {
+            Object.assign(imageAliTekno.style, {
+                width: '',
+                height: '',
+                borderRadius: '',
+            });
+            Object.assign(cardBodyAli.style, {
+                height: '91%',
+                borderRadius: '10px',
+                transform: 'translateY(0)',
+            });
+        });
+        Object.assign(cardBodySam.style, {
+            height: '91%',
+            width: '90%',
+            borderRadius: '10px',
+            transform: 'translateY(0)',
+        });
+        samNeuro.addEventListener('mouseenter', function () {
+            Object.assign(imageSamNeuro.style, {
+                width: '170px',
+                height: '170px',
+                borderRadius: '50%',
+            });
+            Object.assign(cardBodySam.style, {
+                height: '180px',
+                borderRadius: '100px 100px 10px 10px',
+            });
+        });
+        samNeuro.addEventListener('mouseleave', function () {
+            Object.assign(imageSamNeuro.style, {
+                width: '',
+                height: '',
+                borderRadius: '',
+            });
+            Object.assign(cardBodySam.style, {
+                height: '91%',
+                borderRadius: '10px',
+                transform: 'translateY(0)',
+            });
+        });
         inputUser.style.width = '500px';
         inputEmail.style.width = '500px';
         opsiPilar.style.width = '500px';
@@ -1741,12 +2383,6 @@ navItemBaru8.addEventListener('click', () => {
     const contact = document.getElementById('contact');
     contact.scrollIntoView({ behavior: 'smooth' });
 });
-
-
-// DOM
-// rubah image ejen Alicia
-const ejenAliciaNeuro = document.querySelector('#ejen .profil:first-child img');
-ejenAliciaNeuro.src = 'gambar/ejen alicia pilar neuro.jpeg';
 
 
 // aktifkan whatsapp
