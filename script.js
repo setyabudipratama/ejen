@@ -719,7 +719,7 @@ ejen.style.background = 'linear-gradient(to right, olive, var(--black))';
 
 
 // DOM
-// ganti efek card
+// ganti efek hover
 const aliciaNeuro = document.querySelector('#ejen .profil:first-child');
 Object.assign(aliciaNeuro.style, {
     display: 'flex',
@@ -1101,6 +1101,10 @@ samNeuro.addEventListener('mouseleave', function () {
         opacity: '0',
     });
 });
+
+// DOM
+// tukar posisi top ejen
+kimTekno.after(aliTekno);
 
 
 // DOM
