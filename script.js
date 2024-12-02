@@ -762,6 +762,7 @@ aliciaNeuro.addEventListener('mouseenter', function () {
         width: '190px',
         height: '190px',
         borderRadius: '50%',
+        boxShadow: '5px 5px 10px black'
     });
     Object.assign(cardBodyAlicia.style, {
         height: '180px',
@@ -804,7 +805,6 @@ aliciaNeuro.addEventListener('mouseleave', function () {
     });
 });
 
-
 const aliTekno = document.querySelector('#ejen .profil:nth-child(2)');
 Object.assign(aliTekno.style, {
     display: 'flex',
@@ -846,6 +846,7 @@ aliTekno.addEventListener('mouseenter', function () {
         width: '190px',
         height: '190px',
         borderRadius: '50%',
+        boxShadow: '5px 5px 10px black'
     });
     Object.assign(cardBodyAli.style, {
         height: '180px',
@@ -888,7 +889,6 @@ aliTekno.addEventListener('mouseleave', function () {
     });
 });
 
-
 const kimTekno = document.querySelector('#ejen .profil:nth-child(3)');
 Object.assign(kimTekno.style, {
     display: 'flex',
@@ -930,6 +930,7 @@ kimTekno.addEventListener('mouseenter', function () {
         width: '190px',
         height: '190px',
         borderRadius: '50%',
+        boxShadow: '5px 5px 10px black'
     });
     Object.assign(cardBodyKim.style, {
         height: '180px',
@@ -971,53 +972,6 @@ kimTekno.addEventListener('mouseleave', function () {
         opacity: '0',
     });
 });
-kimTekno.addEventListener('mouseenter', function () {
-    Object.assign(imageKimTekno.style, {
-        width: '190px',
-        height: '190px',
-        borderRadius: '50%',
-    });
-    Object.assign(cardBodyKim.style, {
-        height: '180px',
-        borderRadius: '100px 100px 10px 10px',
-    });
-    Object.assign(h2KimTekno.style, {
-        transform: 'translateY(0)',
-        opacity: '1',
-    });
-    Object.assign(spanKimTekno.style, {
-        transform: 'translateY(0)',
-        opacity: '1',
-    });
-    Object.assign(span2KimTekno.style, {
-        transform: 'translateY(0)',
-        opacity: '1',
-    });
-});
-kimTekno.addEventListener('mouseleave', function () {
-    Object.assign(imageKimTekno.style, {
-        width: '',
-        height: '',
-        borderRadius: '',
-    });
-    Object.assign(cardBodyKim.style, {
-        height: '93%',
-        borderRadius: '10px',
-    });
-    Object.assign(h2KimTekno.style, {
-        transform: 'translateY(-50%)',
-        opacity: '0',
-    });
-    Object.assign(spanKimTekno.style, {
-        transform: 'translateY(-50%)',
-        opacity: '0',
-    });
-    Object.assign(span2KimTekno.style, {
-        transform: 'translateY(-50%)',
-        opacity: '0',
-    });
-});
-
 
 const samNeuro = document.querySelector('#ejen .profil:nth-child(4)');
 Object.assign(samNeuro.style, {
@@ -1060,6 +1014,7 @@ samNeuro.addEventListener('mouseenter', function () {
         width: '190px',
         height: '190px',
         borderRadius: '50%',
+        boxShadow: '5px 5px 10px black'
     });
     Object.assign(cardBodySam.style, {
         height: '180px',
