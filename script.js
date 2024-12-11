@@ -1930,6 +1930,8 @@ function applyResponsiveStyles() {
         Object.assign(iris.style, {
             height: '100vh',
         });
+        bgPilar.style.background = 'linear-gradient(55deg, yellow 0%, black 75%)';
+        bgIris.style.background = 'linear-gradient(125deg, yellow 0%, black 75%)';
         Object.assign(h1.style, {
             fontSize: '1.5rem',
         });
