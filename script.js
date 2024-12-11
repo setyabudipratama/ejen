@@ -445,6 +445,7 @@ Object.assign(image2.style, {
     justifyContent: 'center',
     alignItems: 'center',
     overflow: 'hidden',
+    position: 'relative'
 });
 
 // tag img
@@ -459,8 +460,9 @@ Object.assign(img.style, {
     height: '100%',
     objectFit: 'cover',
     marginTop: '50px',
-    display: 'none',
     transition: 'all 0.5s ease',
+    position: 'absolute',
+    opacity: '0'
 });
 
 // tag img 2
@@ -474,8 +476,9 @@ Object.assign(img2.style, {
     width: '250px',
     height: '200px',
     objectFit: 'cover',
-    display: 'none',
     transition: 'all 0.5s ease',
+    position: 'absolute',
+    opacity: '0'
 });
 
 // class btn
@@ -528,11 +531,13 @@ const totalSlides = slides.length;
 function showSlides() {
     slides.forEach((slide, i) => {
         // menghilangkan gambar dan hapus kelas aktif dari semua gambar
-        slide.style.display = 'none';
+        slide.style.opacity = '0';
+        slide.style.zIndex = '0';
         slide.classList.remove('active');
         if (i === currentIndex) {
             // tampilkan gambar yang aktif
-            slide.style.display = 'block';
+            slide.style.opacity = '1';
+            slide.style.zIndex = '1';
             // tambahkan kelas aktif
             slide.classList.add('active');
         }
@@ -560,8 +565,8 @@ image2.insertBefore(span, img2);
 const textSpan = document.createTextNode('I.R.I.S.');
 span.appendChild(textSpan);
 Object.assign(span.style, {
-    position: 'relative',
-    top: '-50px',
+    position: 'absolute',
+    bottom: '10%',
     fontSize: '1rem',
     color: '#ffffff',
     display: 'flex',
@@ -576,11 +581,13 @@ Object.assign(span.style, {
 
 img.addEventListener('mouseenter', function () {
     span.style.opacity = '1';
+    span.style.zIndex = '1';
     span.style.transform = 'translateY(0)';
     img.style.filter = 'brightness(0.7)';
 });
 img.addEventListener('mouseleave', function () {
     span.style.opacity = '0';
+    span.style.zIndex = '0';
     span.style.transform = 'translateY(50%)';
     img.style.filter = 'brightness(1)';
 });
@@ -591,8 +598,8 @@ image2.appendChild(span2);
 const textSpan2 = document.createTextNode('Ejen Alicia');
 span2.appendChild(textSpan2);
 Object.assign(span2.style, {
-    position: 'relative',
-    top: '-50px',
+    position: 'absolute',
+    bottom: '10%',
     fontSize: '1rem',
     color: '#ffffff',
     display: 'flex',
@@ -607,11 +614,13 @@ Object.assign(span2.style, {
 
 img2.addEventListener('mouseenter', function () {
     span2.style.opacity = '1';
+    span2.style.zIndex = '1';
     span2.style.transform = 'translateY(0)';
     img2.style.filter = 'brightness(0.7)';
 });
 img2.addEventListener('mouseleave', function () {
     span2.style.opacity = '0';
+    span2.style.zIndex = '0';
     span2.style.transform = 'translateY(50%)';
     img2.style.filter = 'brightness(1)';
 });
@@ -1624,6 +1633,23 @@ cardArena4.addEventListener('mouseleave', function () {
     pArena4.style.opacity = '0';
 });
 
+
+// DOM
+// ganti background semua slide
+const bgPilar = document.getElementById('pilar');
+const bgIris = document.getElementById('iris');
+const bgKetuaPilar = document.getElementById('ketua');
+const bgSenior = document.getElementById('top');
+const bgMentor = document.getElementById('mentor');
+const bgTopEjen = document.getElementById('ejen');
+const bgOther = document.getElementById('other');
+const bgPlace = document.getElementById('place');
+[bgPilar, bgKetuaPilar, bgMentor, bgOther].forEach(linear1 => {
+    linear1.style.background = 'linear-gradient(45deg, yellow 0%, black 75%)';
+});
+[bgIris, bgSenior, bgTopEjen, bgPlace].forEach(linear2 => {
+    linear2.style.background = 'linear-gradient(135deg, yellow 0%, black 75%)';
+});
 
 // // DOM
 // // tambah halaman kontak
