@@ -470,11 +470,27 @@ const img2 = document.createElement('img');
 // masukkan img ke image2
 image2.appendChild(img2);
 // tambah attribut
-img2.setAttribute('src', 'gambar/Ejen Alicia (1).jpeg');
+img2.setAttribute('src', 'gambar/Ejen Alicia(2).jpeg');
 img2.setAttribute('class', 'slide');
 Object.assign(img2.style, {
-    width: '250px',
-    height: '200px',
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    transition: 'all 0.5s ease',
+    position: 'absolute',
+    opacity: '0'
+});
+
+// tag img 3
+const img3 = document.createElement('img');
+// masukkan img ke image2
+image2.appendChild(img3);
+// tambah attribut
+img3.setAttribute('src', 'gambar/Ejen Alicia (1).jpeg');
+img3.setAttribute('class', 'slide');
+Object.assign(img3.style, {
+    width: '100%',
+    height: '100%',
     objectFit: 'cover',
     transition: 'all 0.5s ease',
     position: 'absolute',
@@ -625,6 +641,39 @@ img2.addEventListener('mouseleave', function () {
     img2.style.filter = 'brightness(1)';
 });
 
+// tag span3
+const span3 = document.createElement('span');
+image2.appendChild(span3);
+const textSpan3 = document.createTextNode('Ejen Alicia');
+span3.appendChild(textSpan3);
+Object.assign(span3.style, {
+    position: 'absolute',
+    bottom: '10%',
+    fontSize: '1rem',
+    color: '#ffffff',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    cursor: 'default',
+    opacity: '0',
+    transform: 'translateY(50%)',
+    transition: 'all 0.5s ease'
+});
+
+img3.addEventListener('mouseenter', function () {
+    span3.style.opacity = '1';
+    span3.style.zIndex = '1';
+    span3.style.transform = 'translateY(0)';
+    img3.style.filter = 'brightness(0.7)';
+});
+img3.addEventListener('mouseleave', function () {
+    span3.style.opacity = '0';
+    span3.style.zIndex = '0';
+    span3.style.transform = 'translateY(50%)';
+    img3.style.filter = 'brightness(1)';
+});
+
 // class desc
 const desc = document.createElement('div');
 content.appendChild(desc);
@@ -662,7 +711,7 @@ const p = document.createElement('p');
 // masukkan p ke desc
 desc.appendChild(p);
 // buat teks
-const textP = document.createTextNode('IRIS (Infinity Retinal Intelligence System) adalah perangkat yang diciptakan oleh ejen Aliya untuk kemajuan M.A.T.A. dan sebelumnya digunakan oleh Ali karena ketidak sengajaan dalam pertempuran. Setelah melewati berbagai akademi dan pertandingan arena, I.R.I.S. secara resmi digunakan oleh ejen Alicia dari pilar neuro.');
+const textP = document.createTextNode('IRIS (Infinity Retinal Intelligence System) adalah perangkat yang diciptakan oleh ejen Aliya untuk kemajuan M.A.T.A. dan sebelumnya digunakan oleh ejen Ali karena ketidak sengajaan dalam pertempuran. Tujuan awal diciptakan yaitu untuk memberikan kepada para ejen supaya mempunyai keahlian yang luar biasa. Setelah melewati berbagai akademi dan pertandingan arena, I.R.I.S. secara resmi digunakan oleh ejen Alicia dari pilar neuro.');
 // masukkan teks
 p.appendChild(textP);
 Object.assign(p.style, {
@@ -1971,13 +2020,13 @@ function applyResponsiveStyles() {
             fontSize: '1rem',
         });
         Object.assign(p.style, {
-            fontSize: '0.8rem',
-            textAlign: 'center',
+            fontSize: '0.7rem',
+            textAlign: 'justify',
             width: '100%',
         });
         Object.assign(button.style, {
            position: 'absolute',
-           top: '80%',
+           top: '85%',
            left: '50%',
         });
         Object.assign(aliciaNeuro.style, {
