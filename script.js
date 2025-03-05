@@ -276,7 +276,7 @@ const imgBaru = document.createElement('img');
 // buat src
 const srcBaru = document.createAttribute('src');
 // masukkan src
-srcBaru.value = 'gambar/comot.jpeg';
+srcBaru.value = 'gambar/comot.webp';
 // masukkan img ke card
 cardBaru.appendChild(imgBaru);
 // masukkan src ke img
@@ -453,7 +453,7 @@ const img = document.createElement('img');
 // masukkan img ke image2
 image2.appendChild(img);
 // tambah attribut
-img.setAttribute('src', 'gambar/iris.jpg');
+img.setAttribute('src', 'gambar/iris.webp');
 img.setAttribute('class', 'slide');
 Object.assign(img.style, {
     width: '100%',
@@ -470,7 +470,7 @@ const img2 = document.createElement('img');
 // masukkan img ke image2
 image2.appendChild(img2);
 // tambah attribut
-img2.setAttribute('src', 'gambar/Ejen Alicia(2).jpeg');
+img2.setAttribute('src', 'gambar/Ejen Alicia(2).webp');
 img2.setAttribute('class', 'slide');
 Object.assign(img2.style, {
     width: '100%',
@@ -486,7 +486,7 @@ const img3 = document.createElement('img');
 // masukkan img ke image2
 image2.appendChild(img3);
 // tambah attribut
-img3.setAttribute('src', 'gambar/Ejen Alicia (1).jpeg');
+img3.setAttribute('src', 'gambar/Ejen Alicia (1).webp');
 img3.setAttribute('class', 'slide');
 Object.assign(img3.style, {
     width: '100%',
@@ -786,7 +786,7 @@ Object.assign(aliciaNeuro.style, {
     width: '200px',
 });
 const imageAliciaNeuro = document.querySelector('#ejen .profil:first-child img');
-imageAliciaNeuro.src = 'gambar/Ejen Alicia Neuro.jpg';
+imageAliciaNeuro.src = 'gambar/Ejen Alicia Neuro.webp';
 const cardBodyAlicia = document.querySelector('#ejen .profil:first-child .card-body');
 Object.assign(cardBodyAlicia.style, {
     height: '93%',
@@ -1202,7 +1202,7 @@ Object.assign(cardArena.style, {
 // tag img
 const imageArena = document.createElement('img');
 cardArena.appendChild(imageArena);
-imageArena.setAttribute('src', 'gambar/Savehouse M.A.T.A..jpg');
+imageArena.setAttribute('src', 'gambar/Savehouse M.A.T.A..webp');
 imageArena.setAttribute('alt', 'Savehouse M.A.T.A.');
 Object.assign(imageArena.style, {
     width: '100%',
@@ -1327,7 +1327,7 @@ Object.assign(cardArena2.style, {
 // tag img
 const imageArena2 = document.createElement('img');
 cardArena2.appendChild(imageArena2);
-imageArena2.setAttribute('src', 'gambar/Akademi M.A.T.A..jpg');
+imageArena2.setAttribute('src', 'gambar/Akademi M.A.T.A..webp');
 imageArena2.setAttribute('alt', 'Akademi M.A.T.A.');
 Object.assign(imageArena2.style, {
     width: '100%',
@@ -1452,7 +1452,7 @@ Object.assign(cardArena3.style, {
 // tag img
 const imageArena3 = document.createElement('img');
 cardArena3.appendChild(imageArena3);
-imageArena3.setAttribute('src', 'gambar/Markas Besar M.A.T.A..jpg');
+imageArena3.setAttribute('src', 'gambar/Markas Besar M.A.T.A..webp');
 imageArena3.setAttribute('alt', 'Markas Besar M.A.T.A.');
 Object.assign(imageArena3.style, {
     width: '100%',
@@ -1577,7 +1577,7 @@ Object.assign(cardArena4.style, {
 // tag img
 const imageArena4 = document.createElement('img');
 cardArena4.appendChild(imageArena4);
-imageArena4.setAttribute('src', 'gambar/M.A.T.A. Arena.jpg');
+imageArena4.setAttribute('src', 'gambar/M.A.T.A. Arena.webp');
 imageArena4.setAttribute('alt', 'M.A.T.A. Arena');
 Object.assign(imageArena4.style, {
     width: '100%',
@@ -1699,276 +1699,6 @@ const bgPlace = document.getElementById('place');
 [bgIris, bgSenior, bgTopEjen, bgPlace].forEach(linear2 => {
     linear2.style.background = 'linear-gradient(135deg, yellow 0%, black 75%)';
 });
-
-// // DOM
-// // tambah halaman kontak
-// const contactUs = document.createElement('section');
-// contactUs.setAttribute('id', 'contact')
-// footer.before(contactUs);
-// Object.assign(contactUs.style, {
-//     width: '100%',
-//     height: '100vh',
-//     background: "url('gambar/arena(2).jpg') no-repeat center/cover",
-//     backgroundBlendMode: 'multiply',
-//     backgroundColor: 'rgba(0, 0, 0, 0.4)',
-//     display: 'flex',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-// });
-
-// // class container
-// const containerContact = document.createElement('div');
-// containerContact.setAttribute('class', 'container');
-// // masukkan element baru
-// contactUs.appendChild(containerContact);
-// Object.assign(containerContact.style, {
-//     width: '90%',
-//     height: '90%',
-//     display: 'flex',
-//     flexDirection: 'column',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-// });
-
-// // tag h2
-// const h2Contact = document.createElement('h2');
-// containerContact.appendChild(h2Contact);
-// h2Contact.innerHTML = 'Contact Us';
-// Object.assign(h2Contact.style, {
-//     fontSize: '1.6rem',
-//     fontFamily: 'pacifico',
-//     color: '#ffffff',
-//     cursor: 'default',
-//     margin: '0',
-//     background: 'transparent',
-//     backdropFilter: 'blur(1rem)',
-//     borderRadius: '5px',
-//     padding: '1px 5px',
-// });
-
-// // tag form
-// const formContact = document.createElement('form');
-// containerContact.appendChild(formContact);
-// formContact.setAttribute('action', '#');
-// formContact.setAttribute('method', '#');
-// Object.assign(formContact.style, {
-//     width: '90%',
-//     minHeight: '80%',
-//     display: 'flex',
-//     flexDirection: 'column',
-//     alignItems: 'center',
-//     rowGap: '20px',
-//     position: 'relative',
-//     top: '5%',
-// });
-
-// // username-group
-// const usernameDiv = document.createElement('div');
-// formContact.appendChild(usernameDiv);
-// usernameDiv.setAttribute('class', 'form-floating');
-
-// // tag input
-// const inputUser = document.createElement('input');
-// usernameDiv.appendChild(inputUser);
-// inputUser.setAttribute('type', 'text');
-// inputUser.setAttribute('class', 'form-control');
-// inputUser.setAttribute('placeholder', 'Username');
-// inputUser.setAttribute('required', '');
-// inputUser.setAttribute('id', 'username');
-// inputUser.style.width = '500px';
-
-// // tag label
-// const labelUser = document.createElement('label');
-// usernameDiv.appendChild(labelUser);
-// labelUser.setAttribute('for', 'username');
-// labelUser.setAttribute('class', 'form-label');
-// labelUser.innerHTML = 'Username';
-
-// // email-group
-// const emailDiv = document.createElement('div');
-// formContact.appendChild(emailDiv);
-// emailDiv.setAttribute('class', 'form-floating');
-
-// // tag input
-// const inputEmail = document.createElement('input');
-// emailDiv.appendChild(inputEmail);
-// inputEmail.setAttribute('type', 'text');
-// inputEmail.setAttribute('class', 'form-control');
-// inputEmail.setAttribute('placeholder', 'Email');
-// inputEmail.setAttribute('required', '');
-// inputEmail.setAttribute('id', 'email');
-// inputEmail.style.width = '500px';
-
-// // tag label
-// const labelEmail = document.createElement('label');
-// emailDiv.appendChild(labelEmail);
-// labelEmail.setAttribute('for', 'email');
-// labelEmail.setAttribute('class', 'form-label');
-// labelEmail.innerHTML = 'Email';
-
-// // class opsi
-// const opsiPilar = document.createElement('div');
-// formContact.appendChild(opsiPilar);
-// opsiPilar.setAttribute('class', 'opsi');
-// Object.assign(opsiPilar.style, {
-//     width: '50%',
-//     display: 'flex',
-//     flexWrap: 'wrap',
-//     justifyContent: 'space-evenly',
-//     alignItems: 'center',
-//     position: 'relative',
-//     top: '5%',
-//     background: 'transparent',
-//     backdropFilter: 'blur(10px)',
-//     borderRadius: '5px',
-// });
-
-// // tag label
-// const labelNeuro = document.createElement('label');
-// labelNeuro.innerHTML = 'Neuro';
-// opsiPilar.appendChild(labelNeuro);
-// Object.assign(labelNeuro.style, {
-//     color: '#ffffff',
-//     cursor: 'pointer',
-//     display: 'flex',
-//     flexDirection: 'row-reverse',
-//     columnGap: '5px',
-// });
-
-// // tag input
-// const inputNeuro = document.createElement('input');
-// inputNeuro.setAttribute('type', 'radio');
-// inputNeuro.setAttribute('name', 'pilar');
-// inputNeuro.setAttribute('id', 'neuroCheck');
-// labelNeuro.appendChild(inputNeuro);
-
-// // tag label
-// const labelTekno = document.createElement('label');
-// labelTekno.innerHTML = 'Tekno';
-// opsiPilar.appendChild(labelTekno);
-// Object.assign(labelTekno.style, {
-//     color: '#ffffff',
-//     cursor: 'pointer',
-//     display: 'flex',
-//     flexDirection: 'row-reverse',
-//     columnGap: '5px',
-// });
-
-// // tag input
-// const inputTekno = document.createElement('input');
-// inputTekno.setAttribute('type', 'radio');
-// inputTekno.setAttribute('name', 'pilar');
-// inputTekno.setAttribute('id', 'teknoCheck');
-// labelTekno.appendChild(inputTekno);
-
-// // tag label
-// const labelInviso = document.createElement('label');
-// labelInviso.innerHTML = 'Inviso';
-// opsiPilar.appendChild(labelInviso);
-// Object.assign(labelInviso.style, {
-//     color: '#ffffff',
-//     cursor: 'pointer',
-//     display: 'flex',
-//     flexDirection: 'row-reverse',
-//     columnGap: '5px',
-// });
-
-// // tag input
-// const inputInviso = document.createElement('input');
-// inputInviso.setAttribute('type', 'radio');
-// inputInviso.setAttribute('name', 'pilar');
-// inputInviso.setAttribute('id', 'invisoCheck');
-// labelInviso.appendChild(inputInviso);
-
-// // tag label
-// const labelKombat = document.createElement('label');
-// labelKombat.innerHTML = 'Kombat';
-// opsiPilar.appendChild(labelKombat);
-// Object.assign(labelKombat.style, {
-//     color: '#ffffff',
-//     cursor: 'pointer',
-//     display: 'flex',
-//     flexDirection: 'row-reverse',
-//     columnGap: '5px',
-// });
-
-// // tag input
-// const inputKombat = document.createElement('input');
-// inputKombat.setAttribute('type', 'radio');
-// inputKombat.setAttribute('name', 'pilar');
-// inputKombat.setAttribute('id', 'kombatCheck');
-// labelKombat.appendChild(inputKombat);
-
-// // tag label
-// const labelBelumPunya = document.createElement('label');
-// labelBelumPunya.innerHTML = 'Belum Punya Pilar';
-// opsiPilar.appendChild(labelBelumPunya);
-// Object.assign(labelBelumPunya.style, {
-//     color: '#ffffff',
-//     cursor: 'pointer',
-//     display: 'flex',
-//     flexDirection: 'row-reverse',
-//     columnGap: '5px',
-// });
-
-// // tag input
-// const inputBelumPunya = document.createElement('input');
-// inputBelumPunya.setAttribute('type', 'radio');
-// inputBelumPunya.setAttribute('name', 'pilar');
-// inputBelumPunya.setAttribute('id', 'belumPunyaPilar');
-// labelBelumPunya.appendChild(inputBelumPunya);
-
-// // textarea-group
-// const textAreaDiv = document.createElement('div');
-// formContact.appendChild(textAreaDiv);
-// textAreaDiv.setAttribute('class', 'form-floating mt-5');
-
-// // tag input
-// const textArea = document.createElement('textarea');
-// textAreaDiv.appendChild(textArea);
-// textArea.setAttribute('type', 'text');
-// textArea.setAttribute('class', 'form-control');
-// textArea.setAttribute('placeholder', 'question');
-// textArea.setAttribute('required', '');
-// textArea.setAttribute('id', 'question');
-// Object.assign(textArea.style, {
-//     width: '500px',
-//     heigth: '200px',
-// });
-
-// // tag label
-// const labelTextArea = document.createElement('label');
-// textAreaDiv.appendChild(labelTextArea);
-// labelTextArea.setAttribute('for', 'question');
-// labelTextArea.setAttribute('class', 'form-label');
-// labelTextArea.innerHTML = 'Question';
-
-// // tag button
-// const buttonContact = document.createElement('button');
-// formContact.appendChild(buttonContact);
-// buttonContact.innerHTML = 'Send';
-// buttonContact.setAttribute('class', 'py-2 px-4');
-// buttonContact.setAttribute('id', 'send');
-// Object.assign(buttonContact.style, {
-//     backgroundColor: '#ffffff',
-//     color: 'black',
-//     border: 'none',
-//     borderRadius: '10px',
-//     cursor: 'pointer',
-//     position: 'relative',
-//     left: '20%',
-//     transition: 'all 0.3s ease',
-// });
-// buttonContact.addEventListener('mouseenter', function () {
-//     buttonContact.style.backgroundColor = 'transparent';
-//     buttonContact.style.color = '#ffffff';
-//     buttonContact.style.border = '2px solid #ffffff';
-// });
-// buttonContact.addEventListener('mouseleave', function () {
-//     buttonContact.style.backgroundColor = '#ffffff';
-//     buttonContact.style.color = '';
-// });
-
 
 // responsive web
 function applyResponsiveStyles() {
@@ -2199,20 +1929,6 @@ function applyResponsiveStyles() {
         pArena2.style.fontSize = '0.8rem';
         pArena3.style.fontSize = '0.8rem';
         pArena4.style.fontSize = '0.8rem';
-        // Object.assign(contactUs.style, {
-        //     background: "url('gambar/ejen alicia pilar neuro.jpeg') no-repeat center/cover",
-        //     backgroundBlendMode: 'multiply',
-        //     backgroundColor: 'rgba(0, 0, 0, 0.4)',
-        // });
-        // Object.assign(formContact.style, {
-        //     position: 'relative',
-        //     top: '15%',
-        // });
-        // inputUser.style.width = '300px';
-        // inputEmail.style.width = '300px';
-        // opsiPilar.style.width = '300px';
-        // textArea.style.width = '300px';
-        // buttonContact.style.left = '35%';
     } else if (window.innerWidth >= 767 && window.innerWidth < 1024) {
         Object.assign(cardBodyAlicia.style, {
             height: '91%',
@@ -2330,11 +2046,6 @@ function applyResponsiveStyles() {
                 transform: 'translateY(0)',
             });
         });
-        // inputUser.style.width = '500px';
-        // inputEmail.style.width = '500px';
-        // opsiPilar.style.width = '500px';
-        // textArea.style.width = '500px';
-        // buttonContact.style.left = '30%';
     }
 }
 
@@ -2396,61 +2107,3 @@ navItemBaru7.addEventListener('click', () => {
     const place = document.getElementById('place');
     place.scrollIntoView({ behavior: 'smooth' });
 });
-
-
-// // buat li baru kedelapan
-// const navItemBaru8 = document.createElement('li');
-// // masukkan ke parent dan sibling paling akhir
-// navbarNav.insertBefore(navItemBaru8, liAkhir);
-// // tambah atribut
-// navItemBaru8.setAttribute('class', 'nav-item');
-// // buat a baru
-// const aBaru8 = document.createElement('a');
-// // buat teks
-// const textBaru8 = document.createTextNode('Contact');
-// // masukkan teks
-// aBaru8.appendChild(textBaru8);
-// // masukkan tag a ke parent
-// navItemBaru8.appendChild(aBaru8);
-// // tambah kelas
-// aBaru8.setAttribute('class', 'nav-link');
-// navItemBaru8.style.cursor = 'pointer';
-// // fungsi untuk scroll ke pilar
-// navItemBaru8.addEventListener('click', () => {
-//     const contact = document.getElementById('contact');
-//     contact.scrollIntoView({ behavior: 'smooth' });
-// });
-
-
-// // aktifkan whatsapp
-// const send = document.getElementById('send');
-// send.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     // ambil value
-//     const name = document.getElementById('username').value;
-//     const email = document.getElementById('email').value;
-//     const checked = document.querySelectorAll('input[type="radio"]');
-//     const neuroCheck = checked[0].checked;
-//     const teknoCheck = checked[1].checked;
-//     const invisoCheck = checked[2].checked;
-//     const kombatCheck = checked[3].checked;
-//     const belumPunyaPilar = checked[4].checked;
-//     const question = document.getElementById('question').value;
-//     // pesan
-//     const messageParts = [
-//         `Nama: ${name}`,
-//         `Email: ${email}`,
-//         `Neuro: ${neuroCheck ? 'Yes' : 'No'}`,
-//         `Tekno: ${teknoCheck ? 'Yes' : 'No'}`,
-//         `Inviso: ${invisoCheck ? 'Yes' : 'No'}`,
-//         `Kombat: ${kombatCheck ? 'Yes' : 'No'}`,
-//         `Belum Punya Pilar: ${belumPunyaPilar ? 'Yes' : 'No'}`,
-//         `Question: ${question}`
-//     ];
-//     const pesan = encodeURIComponent(messageParts.join('\n'));
-//     // nomor
-//     const nmor = "6282264244554";
-//     // buat link
-//     const url = `https://wa.me/${nmor}?text=${pesan}`;
-//     window.open(url);
-// });
