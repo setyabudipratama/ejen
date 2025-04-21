@@ -4,8 +4,10 @@
 }
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid var(--black); */
+    /* border: 1px dotted var(--black); */
 }
 
 html,
@@ -101,11 +103,28 @@ header {
     left: 0;
     margin-top: 55px;
     width: 100%;
-    height: 100vh;
+    height: 93dvh;
     background: url('gambar/ejen\ Alicia.webp') no-repeat center center/cover;
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.3);
+    /* animation: background 10s infinite; */
 }
+
+/* @keyframes background {
+
+    0%,
+    100% {
+        background: url('gambar/ejenAlicia.webp') no-repeat center center/cover;
+    }
+
+    33.33% {
+        background: url('gambar/ejenAlicia2.webp') no-repeat center center/cover;
+    }
+
+    66.66% {
+        background: url('gambar/ejenAlicia3.webp') no-repeat center center/cover;
+    }
+} */
 
 /* class header */
 header .container {
@@ -116,7 +135,7 @@ header .container {
 }
 
 header .container .content {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -164,6 +183,34 @@ header .container .content button:hover {
 /* class fa-arrow-down */
 header .container .content .fa-arrow-down {
     font-size: 1.6rem;
+}
+
+header .container .content .carousel {
+    position: absolute;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+header .container .content .carousel .carousel-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    transition: all 0.3s ease;
+}
+
+header .container .content .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    flex: 0 0 100%;
 }
 
 /* class pilar */
@@ -348,10 +395,12 @@ header .container .content .fa-arrow-down {
 #ketua .container .slider .profil img {
     width: 200px;
     height: 300px;
+    /* tampilan awal */
     border-radius: 10px;
     object-fit: cover;
     margin-top: 20px;
-    z-index: 1;  /* tingkat 1 */
+    z-index: 1;
+    /* tampilan awal */
     box-shadow: 5px 5px 10px var(--black);
     transition: 0.5s ease;
 }
@@ -367,20 +416,22 @@ header .container .content .fa-arrow-down {
     position: absolute;
     bottom: 0;
     border-radius: 0 0 10px 10px;
-    transform: translateY(-20%); /* tampilan awal */
-    z-index: 0;  /* dibawah tingkat 1 / default */
+    transform: translateY(-20%);
+    /* tampilan awal */
+    z-index: 0;
+    /* tampilan awal */
     transition: all 0.5s ease;
 }
 
-/* hover class card-body */
+/* tampilan akhir hover class card-body */
 #ketua .container .slider .profil:hover .card-body {
-    transform: translateY(0); /* tampilan akhir */
+    transform: translateY(0);
 }
 
-/* hover tag img */
+/* tampilan akhir hover tag img */
 #ketua .container .slider .profil:hover img {
-    height: 200px; /* menurunkan tinggi img */
-    border-radius: 10px 10px 0 0; /* menghapus border radius bawah */
+    height: 200px;
+    border-radius: 10px 10px 0 0;
     box-shadow: none;
 }
 
@@ -1090,7 +1141,7 @@ footer .sosial i {
     }
 
     header .container .content {
-        width: 80%;
+        width: 100%;
     }
 
     header .container .content h1 {
@@ -1105,6 +1156,15 @@ footer .sosial i {
 
     header .container .content button .fa-circle-down {
         font-size: 1.3rem;
+    }
+
+    header .container .content .carousel {
+        width: 300px;
+        height: 90%;
+        position: absolute;
+        top: 350px;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     #pilar .desc {
@@ -1185,7 +1245,7 @@ footer .sosial i {
     #other .container .slider .profil:hover .card-body {
         transform: translateY(0);
     }
-    
+
     #ketua .container .slider .profil:hover img,
     #top .container .slider .profil:hover img,
     #mentor .container .slider .profil:hover img,
@@ -1283,7 +1343,12 @@ footer .sosial i {
     }
 
     header .container .content {
-        width: 80%;
+        width: 100%;
+    }
+
+    header .container .content .carousel {
+        width: 250px;
+        height: 100%;
     }
 
     #pilar .desc {
@@ -1355,7 +1420,7 @@ footer .sosial i {
     #other .container .slider .profil:hover .card-body {
         transform: translateY(0);
     }
-    
+
     #ketua .container .slider .profil:hover img,
     #top .container .slider .profil:hover img,
     #mentor .container .slider .profil:hover img,
