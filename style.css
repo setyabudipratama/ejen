@@ -202,7 +202,7 @@ header .container .content .carousel .carousel-item {
     display: flex;
     /* align-items: center; */
     /* justify-content: center; */
-    transition: all 0.3s ease;
+    transition: all 0.8s ease;
 }
 
 header .container .content .carousel img {
