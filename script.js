@@ -2107,3 +2107,20 @@ navItemBaru7.addEventListener('click', () => {
     const place = document.getElementById('place');
     place.scrollIntoView({ behavior: 'smooth' });
 });
+
+
+const carousel = document.querySelector('.carousel-item')
+const items = document.querySelectorAll('.carousel-item img')
+let index = 0
+let interval
+function updateCarousel() {
+    carousel.style.transform = `translateX(${-index * 100}%)`
+}
+function startTimer() {
+    interval = setInterval(nextSlide, 2000)
+}
+function nextSlide() {
+    index = (index + 1) % items.length
+    updateCarousel()
+}
+startTimer()
