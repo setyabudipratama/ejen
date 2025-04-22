@@ -1,6 +1,7 @@
 // fungsi untuk beralih ke halaman pilar
 const btn = document.querySelector('#pilar .btn');
-btn.addEventListener('click', () => {
+btn.addEventListener('click', (e) => {
+    e.preventDefault();
     window.location.href = 'pilar.html'
 });
 
