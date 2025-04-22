@@ -1029,7 +1029,7 @@ footer {
     top: 0;
     width: 100%;
     min-height: 10vh;
-    background-color: yellowgreen;
+    background: linear-gradient(25deg, yellow 0%, black 65%);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -1068,7 +1068,7 @@ footer .contact {
     display: flex;
     flex-direction: column;
     margin: 0;
-    color: var(--black);
+    color: var(--white);
 }
 
 /* tag h2 */
@@ -1096,7 +1096,7 @@ footer .sosial {
     display: flex;
     flex-direction: column;
     margin: 0;
-    color: var(--black);
+    color: var(--white);
 }
 
 /* tag h2 */
