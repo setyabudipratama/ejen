@@ -1430,7 +1430,7 @@ footer .sosial i {
 
     #musim .container .content .season .season1 .inner,
     #musim .container .content .season .season2 .inner {
-        animation: scroll 20s linear infinite;
+        animation: scroll 22s linear infinite;
         animation-delay: 1s;
     }
 
@@ -1446,7 +1446,7 @@ footer .sosial i {
 
 
     #musim .container .content .season .season3 .inner {
-        animation: scroll2 19.5s linear infinite;
+        animation: scroll2 21.5s linear infinite;
         animation-delay: 1s;
     }
 
