@@ -200,8 +200,6 @@ header .container .content .carousel .carousel-item {
     width: 100%;
     height: 100%;
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
     transition: all 0.8s ease;
 }
 
@@ -1022,6 +1020,152 @@ header .container .content .carousel img {
     box-shadow: none;
 } */
 
+#musim {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, yellow 0%, black 75%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 10%;
+
+        h1 {
+            font-size: 1.6rem;
+            color: white;
+            text-transform: capitalize;
+            font-family: pacifico;
+            cursor: default;
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+
+            .season {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+
+                .season1,
+                .season2,
+                .movie1,
+                .season3 {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 20vh;
+                    overflow: hidden;
+                    position: relative;
+
+                    h3 {
+                        font-size: 1.3rem;
+                        color: white;
+                        text-transform: capitalize;
+                        cursor: default;
+                    }
+
+                    .inner {
+                        width: 100%;
+                        height: 60px;
+                        display: flex;
+                        align-items: center;
+                        column-gap: 10px;
+                        /* border: 1px solid white; */
+                        animation: scroll 14s linear infinite;
+                        animation-delay: 1s;
+
+                        .episode {
+                            width: 160px;
+                            height: inherit;
+                            background-color: cyan;
+                            box-shadow: 4px 4px 5px var(--black);
+                            border-radius: 10px;
+                            display: flex;
+                            flex: 0 0 auto;
+                            align-items: center;
+                            justify-content: center;
+                            line-height: 10px;
+                            flex-direction: column;
+                            transition: all 0.5s ease;
+                            z-index: 5;
+
+                            h4,
+                            span {
+                                font-size: 1rem;
+                                color: black;
+                                text-transform: capitalize;
+                                cursor: default;
+                            }
+
+                            span {
+                                text-transform: uppercase;
+                                font-size: 0.8rem;
+                                font-weight: bold;
+                            }
+                        }
+
+                        .episode:active {
+                            transform: scale(1.1);
+                            box-shadow: none;
+                        }
+                    }
+
+                    .inner:hover {
+                        animation-play-state: paused;
+                    }
+                }
+
+                .movie1 .inner {
+                    justify-content: center;
+                }
+
+                .season3 {
+                    .inner {
+                        animation: scroll2 13.9s linear infinite;
+                        animation-delay: 1s;
+                    }
+                }
+
+                .movie1 {
+                    .inner {
+                        animation: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-115%);
+    }
+}
+
 
 /* halaman footer */
 footer {
@@ -1048,7 +1192,7 @@ footer .cipta {
 footer .cipta h5 {
     margin: 0;
     font-size: 1rem;
-    color: var(--white);
+    color: var(--black);
 }
 
 /* tag img */
@@ -1284,6 +1428,38 @@ footer .sosial i {
         top: -5%;
     }
 
+    #musim .container .content .season .season1 .inner,
+    #musim .container .content .season .season2 .inner {
+        animation: scroll 18s linear infinite;
+        animation-delay: 1s;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-650%);
+        }
+    }
+
+
+    #musim .container .content .season .season3 .inner {
+        animation: scroll2 17.5s linear infinite;
+        animation-delay: 1s;
+    }
+
+    @keyframes scroll2 {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-700%);
+        }
+    }
+
     footer {
         width: 100%;
         height: auto;
@@ -1457,6 +1633,37 @@ footer .sosial i {
     #other .container .slider .profil .card-body span:nth-child(3) {
         font-size: 0.8rem;
         top: -5%;
+    }
+
+    #musim .container .content .season .season1 .inner,
+    #musim .container .content .season .season2 .inner {
+        animation: scroll 15s linear infinite;
+        animation-delay: 1s;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-240%);
+        }
+    }
+
+    #musim .container .content .season .season3 .inner {
+        animation: scroll2 14.7s linear infinite;
+        animation-delay: 1s;
+    }
+
+    @keyframes scroll2 {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-270%);
+        }
     }
 
     footer {
