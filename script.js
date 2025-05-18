@@ -2109,6 +2109,29 @@ navItemBaru7.addEventListener('click', () => {
     place.scrollIntoView({ behavior: 'smooth' });
 });
 
+// buat li baru ketujuh
+const navItemBaru8 = document.createElement('li');
+// masukkan ke parent dan sibling paling akhir
+navbarNav.insertBefore(navItemBaru8, liAkhir);
+// tambah atribut
+navItemBaru8.setAttribute('class', 'nav-item');
+// buat a baru
+const aBaru8 = document.createElement('a');
+// buat teks
+const textBaru8 = document.createTextNode('Episode');
+// masukkan teks
+aBaru8.appendChild(textBaru8);
+// masukkan tag a ke parent
+navItemBaru8.appendChild(aBaru8);
+// tambah kelas
+aBaru8.setAttribute('class', 'nav-link');
+navItemBaru8.style.cursor = 'pointer';
+// fungsi untuk scroll ke pilar
+navItemBaru8.addEventListener('click', () => {
+    const musim = document.getElementById('musim');
+    musim.scrollIntoView({ behavior: 'smooth' });
+});
+
 
 const carousel = document.querySelector('.carousel-item')
 const items = document.querySelectorAll('.carousel-item img')
