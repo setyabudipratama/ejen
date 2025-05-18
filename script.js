@@ -1124,10 +1124,10 @@ kimTekno.after(aliTekno);
 // DOM
 // tambah halaman base M.A.T.A.
 // sibling setelahnya
-const footer = document.querySelector('footer');
+const musim = document.querySelector('musim');
 const arena = document.createElement('section');
 // masukkan element baru
-footer.before(arena);
+musim.before(arena);
 // tambah attribute
 arena.setAttribute('id', 'place');
 Object.assign(arena.style, {
