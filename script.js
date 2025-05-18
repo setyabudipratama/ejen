@@ -738,7 +738,7 @@ button.setAttribute('class', 'btn btn-outline-primary');
 button.setAttribute('id', 'irisPage');
 Object.assign(button.style, {
     position: 'absolute',
-    top: '28%',
+    top: '70%',
     right: '10%',
     zIndex: '4',
     width: '140px',
@@ -1124,7 +1124,7 @@ kimTekno.after(aliTekno);
 // DOM
 // tambah halaman base M.A.T.A.
 // sibling setelahnya
-const musim = document.querySelector('musim');
+const musim = document.querySelector('#musim');
 const arena = document.createElement('section');
 // masukkan element baru
 musim.before(arena);
@@ -1701,6 +1701,7 @@ const bgPlace = document.getElementById('place');
     linear2.style.background = 'linear-gradient(135deg, yellow 0%, black 75%)';
 });
 
+
 // responsive web
 function applyResponsiveStyles() {
     if (window.innerWidth < 767) {
@@ -1756,9 +1757,9 @@ function applyResponsiveStyles() {
             width: '100%',
         });
         Object.assign(button.style, {
-           position: 'absolute',
-           top: '85%',
-           left: '50%',
+            position: 'absolute',
+            top: '85%',
+            left: '50%',
         });
         Object.assign(aliciaNeuro.style, {
             display: 'flex',
@@ -1930,6 +1931,20 @@ function applyResponsiveStyles() {
         pArena2.style.fontSize = '0.8rem';
         pArena3.style.fontSize = '0.8rem';
         pArena4.style.fontSize = '0.8rem';
+        // Object.assign(contactUs.style, {
+        //     background: "url('gambar/ejen alicia pilar neuro.jpeg') no-repeat center/cover",
+        //     backgroundBlendMode: 'multiply',
+        //     backgroundColor: 'rgba(0, 0, 0, 0.4)',
+        // });
+        // Object.assign(formContact.style, {
+        //     position: 'relative',
+        //     top: '15%',
+        // });
+        // inputUser.style.width = '300px';
+        // inputEmail.style.width = '300px';
+        // opsiPilar.style.width = '300px';
+        // textArea.style.width = '300px';
+        // buttonContact.style.left = '35%';
     } else if (window.innerWidth >= 767 && window.innerWidth < 1024) {
         Object.assign(cardBodyAlicia.style, {
             height: '91%',
@@ -2047,6 +2062,11 @@ function applyResponsiveStyles() {
                 transform: 'translateY(0)',
             });
         });
+        // inputUser.style.width = '500px';
+        // inputEmail.style.width = '500px';
+        // opsiPilar.style.width = '500px';
+        // textArea.style.width = '500px';
+        // buttonContact.style.left = '30%';
     }
 }
 
@@ -2131,7 +2151,6 @@ navItemBaru8.addEventListener('click', () => {
     const musim = document.getElementById('musim');
     musim.scrollIntoView({ behavior: 'smooth' });
 });
-
 
 const carousel = document.querySelector('.carousel-item')
 const items = document.querySelectorAll('.carousel-item img')
