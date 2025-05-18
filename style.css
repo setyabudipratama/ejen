@@ -1114,7 +1114,7 @@ header .container .content .carousel img {
                             }
                         }
 
-                        .episode:active {
+                        .episode:hover {
                             transform: scale(1.1);
                             box-shadow: none;
                         }
