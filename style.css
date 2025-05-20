@@ -1081,7 +1081,7 @@ header .container .content .carousel img {
                         align-items: center;
                         column-gap: 10px;
                         /* border: 1px solid white; */
-                        animation: scroll 14s linear infinite;
+                        animation: scroll 14s ease infinite;
                         animation-delay: 1s;
 
                         .episode {
@@ -1131,7 +1131,7 @@ header .container .content .carousel img {
 
                 .season3 {
                     .inner {
-                        animation: scroll2 13.9s linear infinite;
+                        animation: scroll2 13.9s ease infinite;
                         animation-delay: 1s;
                     }
                 }
@@ -1430,7 +1430,7 @@ footer .sosial i {
 
     #musim .container .content .season .season1 .inner,
     #musim .container .content .season .season2 .inner {
-        animation: scroll 22s linear infinite;
+        animation: scroll 24s ease infinite;
         animation-delay: 1s;
     }
 
@@ -1446,7 +1446,7 @@ footer .sosial i {
 
 
     #musim .container .content .season .season3 .inner {
-        animation: scroll2 21.5s linear infinite;
+        animation: scroll2 23.6s ease infinite;
         animation-delay: 1s;
     }
 
@@ -1637,7 +1637,7 @@ footer .sosial i {
 
     #musim .container .content .season .season1 .inner,
     #musim .container .content .season .season2 .inner {
-        animation: scroll 15s linear infinite;
+        animation: scroll 15s ease infinite;
         animation-delay: 1s;
     }
 
@@ -1652,7 +1652,7 @@ footer .sosial i {
     }
 
     #musim .container .content .season .season3 .inner {
-        animation: scroll2 14.7s linear infinite;
+        animation: scroll2 14.7s ease infinite;
         animation-delay: 1s;
     }
 
