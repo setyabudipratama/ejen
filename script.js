@@ -311,7 +311,7 @@ spanBaru.style.color = 'black';
 // beri class khusus pada ejen yang telah gugur
 // ambil parent
 const clsZain = document.querySelector('#ketua .profil');
-const clsDjin = document.querySelector('#ketua .profil:nth-child(3)');
+const clsDjin = document.querySelector('#ketua .profil:nth-child(4)');
 const clsAliya = document.querySelector('#top .profil:nth-child(2)');
 // tambah kelas
 clsZain.classList.add('gugur');
